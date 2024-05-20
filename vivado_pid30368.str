@@ -1,0 +1,1604 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 30368
+License: Customer
+
+Current time: 	Mon May 20 20:31:49 CST 2024
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1707x960
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 25 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	lenovo
+User home directory: C:/Users/lenovo
+User working directory: D:/CPU
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado
+HDI_APPROOT: D:/Vivado/2017.4
+RDI_DATADIR: D:/Vivado/2017.4/data
+RDI_BINDIR: D:/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/lenovo/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/lenovo/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/lenovo/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	D:/CPU/vivado.log
+Vivado journal file location: 	D:/CPU/vivado.jou
+Engine tmp dir: 	D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C
+
+GUI allocated memory:	269 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 624 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\CPU\CPU.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 61 MB (+61209kb) [00:00:09]
+// [Engine Memory]: 494 MB (+366373kb) [00:00:09]
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 81 MB (+17885kb) [00:00:10]
+// [Engine Memory]: 534 MB (+15897kb) [00:00:10]
+// [GUI Memory]: 94 MB (+9276kb) [00:00:11]
+// [Engine Memory]: 590 MB (+30985kb) [00:00:11]
+// [GUI Memory]: 99 MB (+1050kb) [00:00:11]
+// [Engine Memory]: 624 MB (+4401kb) [00:00:12]
+// Tcl Message: open_project D:/CPU/CPU.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/vivado/code/CPU' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/CPU/SEU_CSE_507_user_uart_bmpg_1.3'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2017.4/data/ip'. 
+// Project name: CPU; location: D:/CPU; part: xc7a35tcsg324-1
+dismissDialog("Open Project"); // bs (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 632 MB. GUI used memory: 46 MB. Current time: 5/20/24 8:31:50 PM CST
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Out-of-Context module run(s) is/are Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Out-of-Context module run(s) is/are Out-of-date"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run inst_mem_synth_1 
+// x (cj): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: LOAD_FEATURE
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_mem'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 20:32:08 2024] Launched inst_mem_synth_1... Run output will be captured here: D:/CPU/CPU.runs/inst_mem_synth_1/runme.log [Mon May 20 20:32:08 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 10 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 2, true); // B (D, cj) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 656 MB. GUI used memory: 45 MB. Current time: 5/20/24 8:32:11 PM CST
+// [Engine Memory]: 656 MB (+835kb) [00:00:33]
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v)]", 2, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), uart_inst : uart_bmpg_0 (uart_bmpg_0.xci)]", 4, false, false, false, false, false, true); // B (D, cj) - Double Click
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 23 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v)]", 7); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v), immGen : GenImm (GenImm.v)]", 9, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v), immGen : GenImm (GenImm.v)]", 9, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [Engine Memory]: 711 MB (+23589kb) [00:01:02]
+// [GUI Memory]: 110 MB (+5891kb) [00:01:02]
+// HMemoryUtils.trashcanNow. Engine heap size: 711 MB. GUI used memory: 52 MB. Current time: 5/20/24 8:32:40 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v), regFile : Register (Register.v)]", 8, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v), regFile : Register (Register.v)]", 8, false, false, false, false, false, true); // B (D, cj) - Double Click
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v)]", 7); // B (D, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("Register.v", 474, 71); // cd (w, cj)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 137 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 20:35:15 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+selectCodeEditor("Register.v", 369, 213); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "GenImm.v", 2); // k (j, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 637 seconds
+dismissDialog("Implementation Completed"); // ah (cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 711 MB. GUI used memory: 57 MB. Current time: 5/20/24 9:02:43 PM CST
+// Elapsed time: 1262 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cj)
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bs (cj):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bs (cj)
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+dismissDialog("Auto Connect"); // bs (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Elapsed time: 24 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// [Engine Memory]: 1,089 MB (+359503kb) [00:36:40]
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,092 MB. GUI used memory: 59 MB. Current time: 5/20/24 9:08:19 PM CST
+// Elapsed time: 131 seconds
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aF (Q, cj)
+// Tcl Command: 'rdi::info_commands {dis*}'
+applyEnter(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "disconnect_hw_server"); // aF (ae, cj)
+// Tcl Command: 'disconnect_hw_server'
+// Tcl Command: 'disconnect_hw_server'
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: disconnect_hw_server 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,111 MB. GUI used memory: 59 MB. Current time: 5/20/24 9:10:39 PM CST
+// Elapsed time: 22 seconds
+selectCodeEditor("top.v", 868, 204); // cd (w, cj)
+// Elapsed time: 25 seconds
+selectCodeEditor("top.v", 895, 41); // cd (w, cj)
+// Elapsed time: 68 seconds
+selectCodeEditor("top.v", 899, 131); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis]", 4); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:12:33 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+// Elapsed time: 15 seconds
+selectCodeEditor("top.v", 450, 173); // cd (w, cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+// bs (cj):  Open Implemented Design : addNotify
+// Tcl Message: open_run impl_1 
+// [Engine Memory]: 1,315 MB (+179005kb) [00:41:51]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,372 MB. GUI used memory: 62 MB. Current time: 5/20/24 9:13:29 PM CST
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// [Engine Memory]: 1,513 MB (+139111kb) [00:42:01]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,568 MB. GUI used memory: 61 MB. Current time: 5/20/24 9:13:43 PM CST
+// [Engine Memory]: 1,942 MB (+370663kb) [00:42:11]
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,953 MB. GUI used memory: 62 MB. Current time: 5/20/24 9:13:48 PM CST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,117 MB (+81369kb) [00:42:12]
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.4 INFO: [Device 21-403] Loading part xc7a35tcsg324-1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top_board.xdc] Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top_board.xdc] Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top_early.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [D:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [D:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] 
+// Tcl Message: get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2405.211 ; gain = 563.070 
+// Tcl Message: Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top_early.xdc] Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top.xdc] Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp2/top.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2405.473 ; gain = 0.262 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2405.473 ; gain = 0.262 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 2564.008 ; gain = 1037.766 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// [GUI Memory]: 119 MB (+3648kb) [00:42:17]
+// 'dO' command handler elapsed time: 27 seconds
+// Elapsed time: 28 seconds
+dismissDialog("Open Implemented Design"); // bs (cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Register.v", 4); // k (j, cj)
+// [GUI Memory]: 126 MB (+1041kb) [00:42:24]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 2); // k (j, cj)
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 33, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+// [GUI Memory]: 139 MB (+6641kb) [00:43:00]
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/CPU/CPU.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bs (cj)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cZ, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+// [GUI Memory]: 149 MB (+3729kb) [00:43:09]
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/CPU/CPU.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 28 seconds
+selectCodeEditor("top.v", 506, 75); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_decoder : ID (ID.v)]", 7); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v)]", 6); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v)]", 6); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), dmem : DMemory32 (DMemory32.v)]", 10); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), dmem : DMemory32 (DMemory32.v), dm : data_mem (data_mem.xci)]", 11, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), dmem : DMemory32 (DMemory32.v), dm : data_mem (data_mem.xci)]", 11, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cj): Re-customize IP: addNotify
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), dmem : DMemory32 (DMemory32.v), dm : data_mem (data_mem.xci)]", 11, false); // B (D, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,152 MB. GUI used memory: 108 MB. Current time: 5/20/24 9:15:34 PM CST
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // bb (C, r)
+dismissDialog("Re-customize IP"); // r (cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), rom_inst : programROM (programROM.v)]", 5); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), rom_inst : programROM (programROM.v), rom_inst : inst_mem (inst_mem.xci)]", 6, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), rom_inst : programROM (programROM.v), rom_inst : inst_mem (inst_mem.xci)]", 6, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cj): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Other Options", 2); // bb (C, r)
+selectCheckBox((HResource) null, "Load Init File", false); // g (l, r): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded}] [get_ips inst_mem] 
+// r (cj): Re-customize IP: addNotify
+// bs (r):  Re-customize IP : addNotify
+// TclEventType: FILESET_UPDATE_IP
+// au (cj): Generate Output Products: addNotify
+dismissDialog("Re-customize IP"); // bs (r)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (au)
+// bs (cj):  Managing Output Products : addNotify
+// Tcl Message: generate_target all [get_files  D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'inst_mem'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'inst_mem'... 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'inst_mem'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'inst_mem'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'inst_mem'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all inst_mem] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP inst_mem, cache-ID = bfd45220a76bf1e6; cache size = 5.776 MB. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// Tcl Message: catch { [ delete_ip_run [get_ips -all inst_mem] ] } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [Project 1-386] Moving file 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' from fileset 'inst_mem' to fileset 'sources_1'. INFO: [Project 1-386] Moving file 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem.xcix' from fileset 'inst_mem' to fileset 'sources_1'. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects [get_files D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci] -no_script -sync -force -quiet 
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci] 
+// Tcl Message: INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: export_simulation -of_objects [get_files D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci] -directory D:/CPU/CPU.ip_user_files/sim_scripts -ip_user_files_dir D:/CPU/CPU.ip_user_files -ipstatic_source_dir D:/CPU/CPU.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/CPU/CPU.cache/compile_simlib/modelsim} {questa=D:/CPU/CPU.cache/compile_simlib/questa} {riviera=D:/CPU/CPU.cache/compile_simlib/riviera} {activehdl=D:/CPU/CPU.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectButton("PAResourceQtoS.SimpleOutputProductDialog_GENERATION_OF_OUTPUT_PRODUCTS_COMPLETED_OK", "OK"); // JButton (A, G)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:16:16 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+selectCodeEditor("GenImm.v", 625, 197); // cd (w, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+// Elapsed time: 20 seconds
+selectCodeEditor("top.v", 157, 88); // cd (w, cj)
+selectCodeEditor("top.v", 157, 88, false, false, false, false, true); // cd (w, cj) - Double Click
+typeControlKey((HResource) null, "top.v", 'c'); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), io : MemOrIO (MemOrIO.v)]", 14, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), io : MemOrIO (MemOrIO.v)]", 14, false, false, false, false, false, true); // B (D, cj) - Double Click
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "MemOrIO.v", 4); // k (j, cj)
+// [GUI Memory]: 158 MB (+1749kb) [00:46:05]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Register.v", 3); // k (j, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), segs_inst : segs (segs.v)]", 17, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), segs_inst : segs (segs.v)]", 17, false, false, false, false, false, true); // B (D, cj) - Double Click
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:18:15 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 39 seconds
+selectCodeEditor("segs.v", 256, 313); // cd (w, cj)
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// [GUI Memory]: 170 MB (+3650kb) [00:47:34]
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cj): Save Project: addNotify
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Save Project"); // am (cj)
+// Tcl Command: 'rdi::info_commands {dis*}'
+// Elapsed time: 10 seconds
+setText(RDIResource.CommandsInput_TYPE_TCL_COMMAND_HERE, "disconnect_hw_server", true); // aF (ae, cj)
+// Tcl Command: 'disconnect_hw_server'
+// Tcl Command: 'disconnect_hw_server'
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: disconnect_hw_server 
+// Elapsed time: 10 seconds
+selectCodeEditor("segs.v", 134, 312); // cd (w, cj)
+typeControlKey((HResource) null, "segs.v", 'c'); // cd (w, cj)
+selectCodeEditor("segs.v", 197, 335); // cd (w, cj)
+typeControlKey((HResource) null, "segs.v", 'v'); // cd (w, cj)
+selectCodeEditor("segs.v", 246, 330); // cd (w, cj)
+selectCodeEditor("segs.v", 246, 330); // cd (w, cj)
+selectCodeEditor("segs.v", 246, 330); // cd (w, cj)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,172 MB. GUI used memory: 115 MB. Current time: 5/20/24 9:20:29 PM CST
+// Elapsed time: 726 seconds
+selectCodeEditor("segs.v", 232, 289); // cd (w, cj)
+// Elapsed time: 37 seconds
+selectCodeEditor("segs.v", 236, 312); // cd (w, cj)
+selectCodeEditor("segs.v", 245, 328); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("segs.v", 415, 209); // cd (w, cj)
+selectCodeEditor("segs.v", 94, 291); // cd (w, cj)
+typeControlKey((HResource) null, "segs.v", 'c'); // cd (w, cj)
+selectCodeEditor("segs.v", 92, 253); // cd (w, cj)
+typeControlKey((HResource) null, "segs.v", 'v'); // cd (w, cj)
+selectCodeEditor("segs.v", 190, 273); // cd (w, cj)
+selectCodeEditor("segs.v", 94, 239); // cd (w, cj)
+selectCodeEditor("segs.v", 91, 258); // cd (w, cj)
+selectCodeEditor("segs.v", 92, 272); // cd (w, cj)
+selectCodeEditor("segs.v", 191, 296); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("segs.v", 92, 143); // cd (w, cj)
+typeControlKey((HResource) null, "segs.v", 'c'); // cd (w, cj)
+// Elapsed time: 333 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 18); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 18); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Constraints Wizard]", 19, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WIZARD
+// cF (cj): Design Modified on Disk: addNotify
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // a (cF)
+// bs (cj):  Reloading : addNotify
+dismissDialog("Design Modified on Disk"); // cF (cj)
+// TclEventType: DESIGN_REFRESH
+// TclEventType: TIMING_RESULTS_UNLOAD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,174 MB. GUI used memory: 85 MB. Current time: 5/20/24 9:39:08 PM CST
+// Engine heap size: 2,174 MB. GUI used memory: 86 MB. Current time: 5/20/24 9:39:08 PM CST
+// Tcl Message: refresh_design 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,174 MB. GUI used memory: 83 MB. Current time: 5/20/24 9:39:09 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.4 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top_board.xdc] Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top_board.xdc] Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top_early.xdc] 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [D:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [D:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] 
+// Tcl Message: Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top_early.xdc] Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top.xdc] Finished Parsing XDC File [D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/dcp6/top.xdc] Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2564.008 ; gain = 0.000 
+// Tcl Message: Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2564.008 ; gain = 0.000 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2570.316 ; gain = 6.309 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+dismissDialog("Reloading"); // bs (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Constraints Wizard]", 19, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WIZARD
+// d (cj): Define Constraints and Target: addNotify
+selectButton("PAResourceTtoZ.TimingConstraintsWizardHandler_THERE_NO_DESIGNATED_TARGET_CONSTRAINTS_Define Target", "Define Target"); // JButton (A, G)
+selectTable(PAResourceAtoD.ConstraintsChooserPanel_FILE_TABLE, "false ; constraint.xdc ; D:\\CPU\\CPU.srcs\\constrs_1\\new", 0, "constraint.xdc", 1); // ac (O, d)
+selectTable(PAResourceAtoD.ConstraintsChooserPanel_FILE_TABLE, "false ; constraint.xdc ; D:\\CPU\\CPU.srcs\\constrs_1\\new", 0, "false", 0); // ac (O, d)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (d)
+// 'c' command handler elapsed time: 6 seconds
+dismissDialog("Define Constraints and Target"); // d (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property target_constrs_file D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc [current_fileset -constrset] 
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Constraints Wizard]", 16, false); // u (O, cj)
+// bi (cj): Synthesis is Out-of-date: addNotify
+selectButton(PAResourceQtoS.StaleRunDialog_OPEN_DESIGN, "Open Design"); // a (bi)
+// bs (cj):  Open Synthesized Design : addNotify
+dismissDialog("Synthesis is Out-of-date"); // bi (cj)
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a35tcsg324-1 
+// TclEventType: READ_XDC_FILE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 2,280 MB. GUI used memory: 119 MB. Current time: 5/20/24 9:39:40 PM CST
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// [Engine Memory]: 2,299 MB (+79969kb) [01:08:03]
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,299 MB. GUI used memory: 115 MB. Current time: 5/20/24 9:39:41 PM CST
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'clk1/inst' Finished Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'clk1/inst' Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'clk1/inst' 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] 
+// Tcl Message: Finished Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'clk1/inst' Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc] Finished Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 1 inverter(s) to 30 load pin(s). INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2784.836 ; gain = 205.762 
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WIZARD
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// cC (cj): Timing Constraints Wizard: addNotify
+dismissDialog("Open Synthesized Design"); // bs (cj)
+dismissDialog("Timing Constraints Wizard"); // cC (cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 2); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 2); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "UART_2177 (2) ; (Multiple) ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; (Multiple) ; ", 1); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // G (O, cj)
+// Elapsed time: 13 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "switch (16) ; IN ;  ;  ; (Multiple) ; (Multiple) ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "switch (16) ; IN ;  ;  ; (Multiple) ; (Multiple) ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+// Elapsed time: 30 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "led (16) ; OUT ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 3); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_en (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 5); // G (O, cj)
+// Elapsed time: 21 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_en (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 5); // G (O, cj)
+// [GUI Memory]: 179 MB (+933kb) [01:10:10]
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_out1 (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 6); // G (O, cj)
+// Elapsed time: 14 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_out1 (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 6); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_out2 (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 7); // G (O, cj)
+// Elapsed time: 11 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "seg_out2 (8) ; OUT ;  ;  ; true ; 35 ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 7); // G (O, cj)
+// Elapsed time: 13 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (5) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 9); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ; R1 ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 12, "R1", 3, false); // G (O, cj)
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports rst P15 
+// Elapsed time: 11 seconds
+applyEnter(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, (String) null); // G (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// bs (cj):  Save Constraints : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bs (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 21); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint.xdc]", 23, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint.xdc]", 23, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 189 MB (+603kb) [01:11:25]
+selectCodeEditor("constraint.xdc", 495, 153); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "p15"); // l (aP, cj)
+selectCodeEditor("constraint.xdc", 495, 121); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart", true); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart"); // l (aP, cj)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "uart"); // l (aP, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Constraints Wizard]", 16, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WIZARD
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// Tcl Command: 'create_clock -help'
+// cC (cj): Timing Constraints Wizard: addNotify
+dismissDialog("Timing Constraints Wizard"); // cC (cj)
+// [GUI Memory]: 199 MB (+1217kb) [01:11:59]
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 2); // k (j, cj)
+selectCodeEditor("top.v", 41, 170); // cd (w, cj)
+selectCodeEditor("top.v", 41, 170, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("top.v", 100, 333); // cd (w, cj)
+selectCodeEditor("top.v", 100, 333, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("top.v", 199, 338); // cd (w, cj)
+selectCodeEditor("top.v", 199, 338, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("top.v", 76, 293); // cd (w, cj)
+selectCodeEditor("top.v", 169, 297); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("top.v", 87, 215); // cd (w, cj)
+selectCodeEditor("top.v", 87, 215, false, false, false, false, true); // cd (w, cj) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("top.v", 157, 269); // cd (w, cj)
+// Elapsed time: 23 seconds
+selectCodeEditor("top.v", 512, 317); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:45:06 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 7 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 19 seconds
+selectCodeEditor("top.v", 788, 239); // cd (w, cj)
+selectCodeEditor("top.v", 597, 169); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 88 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:47:04 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 68 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 5 seconds
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 21:48:19 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+// bs (cj):  Generate Bitstream : addNotify
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_COMPLETED
+// ah (cj): Bitstream Generation Completed: addNotify
+// Elapsed time: 58 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+dismissDialog("Bitstream Generation Completed"); // ah (cj)
+// Elapsed time: 17 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 42); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 42); // u (O, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 43, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bs (cj):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2017.4   **** Build date : Dec 15 2017-21:08:27     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   
+dismissDialog("Auto Connect"); // bs (cj)
+// Elapsed time: 145 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Elapsed time: 21 seconds
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cZ, cj)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bs (cj):  Auto Connect : addNotify
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/CPU/CPU.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bs (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 44, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ac (ai, cj)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bA (cj): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bA)
+// bs (cj):  Program Device : addNotify
+dismissDialog("Program Device"); // bA (cj)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/CPU/CPU.runs/impl_1/top.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bs (cj)
+// Elapsed time: 55 seconds
+selectCodeEditor("top.v", 676, 154); // cd (w, cj)
+// [GUI Memory]: 210 MB (+70kb) [01:22:29]
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "segs.v", 4); // k (j, cj)
+selectCodeEditor("segs.v", 253, 217); // cd (w, cj)
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 0); // k (j, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("top.v", 186, 198); // cd (w, cj)
+// Elapsed time: 93 seconds
+selectCodeEditor("top.v", 380, 209); // cd (w, cj)
+// Elapsed time: 115 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cj) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectCodeEditor("constraint.xdc", 412, 173); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "p15"); // l (aP, cj)
+selectCodeEditor("constraint.xdc", 176, 318); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+selectCodeEditor("top.v", 253, 176); // cd (w, cj)
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 6); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+selectCodeEditor("top.v", 132, 163); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("top.v", 108, 200); // cd (w, cj)
+selectCodeEditor("top.v", 78, 185); // cd (w, cj)
+selectCodeEditor("top.v", 78, 103); // cd (w, cj)
+// Elapsed time: 11 seconds
+selectCodeEditor("top.v", 118, 199); // cd (w, cj)
+// Elapsed time: 14 seconds
+selectCodeEditor("top.v", 93, 204); // cd (w, cj)
+selectCodeEditor("top.v", 95, 220); // cd (w, cj)
+selectCodeEditor("top.v", 97, 214); // cd (w, cj)
+selectCodeEditor("top.v", 76, 153); // cd (w, cj)
+selectCodeEditor("top.v", 77, 146); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 31 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rst"); // l (aP, cj)
+selectCodeEditor("top.v", 208, 188); // cd (w, cj)
+selectCodeEditor("top.v", 272, 252); // cd (w, cj)
+selectCodeEditor("top.v", 22, 238); // cd (w, cj)
+selectCodeEditor("top.v", 206, 180); // cd (w, cj)
+// Elapsed time: 17 seconds
+selectCodeEditor("top.v", 38, 183); // cd (w, cj)
+selectCodeEditor("top.v", 38, 183, false, false, false, false, true); // cd (w, cj) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 11 seconds
+selectCodeEditor("top.v", 1, 236); // cd (w, cj)
+// Elapsed time: 15 seconds
+selectCodeEditor("top.v", 97, 194); // cd (w, cj)
+selectCodeEditor("top.v", 131, 3); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+dismissDialog("Run Synthesis"); // x (cj)
+// Elapsed time: 63 seconds
+selectCodeEditor("top.v", 757, 128); // cd (w, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v)]", 7, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v)]", 7, true, false, false, false, false, true); // B (D, cj) - Double Click - Node
+selectCodeEditor("IF.v", 84, 331); // cd (w, cj)
+typeControlKey((HResource) null, "IF.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("IF.v", 9, 85); // cd (w, cj)
+selectCodeEditor("IF.v", 11, 85); // cd (w, cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 50 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), rom_inst : programROM (programROM.v)]", 5); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v)]", 6); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v), IF_pc : PC (PC.v)]", 7, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top (top.v), inst_fetch : IF (IF.v), IF_pc : PC (PC.v)]", 7, false, false, false, false, false, true); // B (D, cj) - Double Click
+selectCodeEditor("PC.v", 393, 87); // cd (w, cj)
+typeControlKey((HResource) null, "PC.v", 'v'); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("PC.v", 314, 173); // cd (w, cj)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// x (cj): Run Synthesis: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (x)
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Run Synthesis"); // x (cj)
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:05:07 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// [GUI Memory]: 222 MB (+2155kb) [01:34:00]
+// Elapsed time: 116 seconds
+selectCodeEditor("top.v", 379, 209); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 45 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:07:51 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 66 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:09:01 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,368 MB. GUI used memory: 138 MB. Current time: 5/20/24 10:09:46 PM CST
+// Elapsed time: 53 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+// Elapsed time: 136 seconds
+selectCodeEditor("top.v", 825, 46); // cd (w, cj)
+// Elapsed time: 55 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 6); // k (j, cj)
+// Elapsed time: 29 seconds
+selectCodeEditor("constraint.xdc", 155, 123); // cd (w, cj)
+typeControlKey((HResource) null, "constraint.xdc", 'c'); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 167, 24); // cd (w, cj)
+typeControlKey((HResource) null, "constraint.xdc", 'v'); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 1); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:13:53 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 124 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:16:06 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+// 'c' command handler elapsed time: 8 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 1); // k (j, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 52 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:17:19 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+// Elapsed time: 109 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+// Elapsed time: 34 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Pin Planning, [DRC UCIO-1] Unconstrained Logical Port: 1 out of 58 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: rst.. ]", 10, false); // ah (O, cj)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "port;-;rst;-;;-;10;-;"); // ah (O, cj)
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: current_design impl_1 
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 7); // k (j, cj)
+selectCodeEditor("constraint.xdc", 384, 110); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 91, 182); // cd (w, cj)
+typeControlKey((HResource) null, "constraint.xdc", 'c'); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 92, 197); // cd (w, cj)
+typeControlKey((HResource) null, "constraint.xdc", 'v'); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis]", 3); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:20:28 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+selectCodeEditor("constraint.xdc", 625, 165); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 119 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:22:34 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 219 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:26:17 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+// Elapsed time: 49 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 2); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 7); // k (j, cj)
+selectCodeEditor("constraint.xdc", 307, 146); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 297, 143); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 296, 127); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 296, 127, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("constraint.xdc", 296, 127); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 422, 221); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 422, 221, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("constraint.xdc", 422, 221); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 422, 221); // cd (w, cj)
+// Elapsed time: 15 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rst"); // l (aP, cj)
+selectCodeEditor("constraint.xdc", 314, 108); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 6); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:28:02 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Synthesis Completed: addNotify
+// Elapsed time: 221 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:31:46 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 25 seconds
+selectCodeEditor("constraint.xdc", 534, 73); // cd (w, cj)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_COMPLETED
+// ah (cj): Implementation Completed: addNotify
+// Elapsed time: 152 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "Generate Bitstream"); // a (N, ah)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cj)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// bs (cj):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:34:48 2024] Launched impl_1... Run output will be captured here: D:/CPU/CPU.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bs (cj)
+// TclEventType: RUN_FAILED
+// ah (cj): Bitstream Generation Failed: addNotify
+// Elapsed time: 53 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (cj)
+selectCodeEditor("constraint.xdc", 420, 118); // cd (w, cj)
+// Elapsed time: 17 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rst"); // l (aP, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Pin Planning, [DRC UCIO-1] Unconstrained Logical Port: 1 out of 58 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: rst.. ]", 10, false); // ah (O, cj)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Write Bitstream, DRC, Pin Planning, [DRC UCIO-1] Unconstrained Logical Port: 1 out of 58 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: rst.. ]", 10, false, false, false, false, true, false); // ah (O, cj) - Popup Trigger
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // Z (K, Popup.HeavyWeightWindow)
+// Elapsed time: 115 seconds
+selectCodeEditor("constraint.xdc", 450, 67); // cd (w, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "s6"); // l (aP, cj)
+// Elapsed time: 52 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Constraints Wizard]", 16, false); // u (O, cj)
+// TclEventType: CURR_DESIGN_SET
+// Run Command: PAResourceCommand.PACommandNames_TIMING_CONSTRAINTS_WIZARD
+// cF (cj): Design Modified on Disk: addNotify
+// Tcl Message: current_design synth_1 
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // a (cF)
+// bs (cj):  Reloading : addNotify
+dismissDialog("Design Modified on Disk"); // cF (cj)
+// Tcl Message: refresh_design 
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,368 MB. GUI used memory: 137 MB. Current time: 5/20/24 10:39:13 PM CST
+// Engine heap size: 2,368 MB. GUI used memory: 138 MB. Current time: 5/20/24 10:39:13 PM CST
+// Tcl Message: INFO: [Project 1-454] Reading design checkpoint 'D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/cpuclk/cpuclk.dcp' for cell 'clk1' INFO: [Project 1-454] Reading design checkpoint 'D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/uart_bmpg_0_2/uart_bmpg_0.dcp' for cell 'uart_inst' INFO: [Project 1-454] Reading design checkpoint 'D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/data_mem/data_mem.dcp' for cell 'dmem/dm' INFO: [Project 1-454] Reading design checkpoint 'D:/CPU/.Xil/Vivado-30368-LAPTOP-14CM3F3C/inst_mem/inst_mem.dcp' for cell 'rom_inst/rom_inst' 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 2,368 MB. GUI used memory: 130 MB. Current time: 5/20/24 10:39:15 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Package: addNotify
+// Device: addNotify
+// DeviceView Instantiated
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2017.4 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'clk1/inst' Finished Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'clk1/inst' Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'clk1/inst' 
+// Tcl Message: INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] INFO: [Timing 38-2] Deriving generated clocks [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc:57] 
+// Tcl Message: Finished Parsing XDC File [d:/CPU/CPU.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'clk1/inst' Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc] 
+// Tcl Message: Finished Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2826.191 ; gain = 41.355 
+// M (cj): Critical Messages: addNotify
+dismissDialog("Reloading"); // bs (cj)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (M)
+dismissDialog("Critical Messages"); // M (cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "switch (16) ; IN ;  ;  ; (Multiple) ; (Multiple) ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "switch (16) ; IN ;  ;  ; (Multiple) ; (Multiple) ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "ARESETN_2177 (1) ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, (String) null, 3, false); // G (O, cj)
+// Tcl Message: set_property package_pin "" [get_ports [list  rst]] 
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (4) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 11); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, (String) null, 3, false); // G (O, cj)
+// Elapsed time: 34 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "UART_2177 (2) ; (Multiple) ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; (Multiple) ; ", 4); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 5); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (2) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 5); // G (O, cj)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "UART_2177 (2) ; (Multiple) ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; (Multiple) ; ", 4); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, (String) null, 3, false); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2, "Scalar ports (1)", 0, true); // G (O, cj) - Node
+// Tcl Message: set_property package_pin "" [get_ports [list  rst]] 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // G (O, cj)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "ARESETN_2177 (1) ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1, "ARESETN_2177 (1)", 0, true); // G (O, cj) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "ARESETN_2177 (1) ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1, "ARESETN_2177 (1)", 0, true); // G (O, cj) - Node
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "ARESETN_2177 (1) ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1); // G (O, cj)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "ARESETN_2177 (1) ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1, "ARESETN_2177 (1)", 0, true, false, false, false, false, true); // G (O, cj) - Double Click - Node
+selectButton(RDIResource.PropertiesView_PREVIOUS_OBJECT, "Properties_backward"); // B (f, cj)
+selectButton(RDIResource.PropertiesView_NEXT_OBJECT, "Properties_forward"); // B (f, cj)
+selectButton((HResource) null, "Properties_settings"); // u (f, cj): TRUE
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "rst ; IN ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, "rst", 0, false); // G (O, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 7); // k (j, cj)
+selectCodeEditor("constraint.xdc", 431, 131); // cd (w, cj)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "segs.v", 6); // k (j, cj)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "constraint.xdc", 7); // k (j, cj)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "s6", true); // l (aP, cj)
+selectCodeEditor("constraint.xdc", 171, 25); // cd (w, cj)
+selectCodeEditor("constraint.xdc", 168, 32); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.v", 2); // k (j, cj)
+selectCodeEditor("top.v", 172, 61); // cd (w, cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("top.v", 197, 217); // cd (w, cj)
+selectCodeEditor("top.v", 4, 235); // cd (w, cj)
+selectCodeEditor("top.v", 106, 145); // cd (w, cj)
+selectCodeEditor("top.v", 103, 241); // cd (w, cj)
+selectCodeEditor("top.v", 83, 293); // cd (w, cj)
+selectCodeEditor("top.v", 54, 276); // cd (w, cj)
+selectCodeEditor("top.v", 52, 258); // cd (w, cj)
+selectCodeEditor("top.v", 98, 179); // cd (w, cj)
+// Elapsed time: 12 seconds
+selectCodeEditor("top.v", 76, 296); // cd (w, cj)
+selectCodeEditor("top.v", 73, 275); // cd (w, cj)
+selectCodeEditor("top.v", 75, 312); // cd (w, cj)
+selectCodeEditor("top.v", 56, 354); // cd (w, cj)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 128 seconds
+selectCodeEditor("top.v", 774, 263); // cd (w, cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 5); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// am (cj): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// ae (cj): Design Modified on Disk: addNotify
+dismissDialog("Save Project"); // am (cj)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (ae)
+// ae (cj): Design Modified on Disk: addNotify
+dismissDialog("Design Modified on Disk"); // ae (cj)
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (ae)
+// bs (cj):  Save Constraints : addNotify
+dismissDialog("Design Modified on Disk"); // ae (cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// Tcl Message: save_constraints -force 
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Save Constraints"); // bs (cj)
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// Tcl Message: [Mon May 20 22:46:02 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 20 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)
+// Elapsed time: 10 seconds
+selectCodeEditor("top.v", 46, 27); // cd (w, cj)
+selectCodeEditor("top.v", 46, 27, false, false, false, false, true); // cd (w, cj) - Double Click
+selectCodeEditor("top.v", 46, 27); // cd (w, cj)
+selectCodeEditor("top.v", 46, 27); // cd (w, cj)
+selectCodeEditor("top.v", 46, 27); // cd (w, cj)
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_FAILED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// ah (cj): Synthesis Failed: addNotify
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cj)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/inst_mem/inst_mem.xci' is already up-to-date INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/CPU/CPU.srcs/sources_1/ip/uart_bmpg_0_2/uart_bmpg_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Mon May 20 22:46:31 2024] Launched synth_1... Run output will be captured here: D:/CPU/CPU.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Starting Design Runs"); // bs (cj)

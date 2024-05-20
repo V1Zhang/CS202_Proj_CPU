@@ -1,0 +1,1510 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 31484 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 344.703 ; gain = 103.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/CPU/CPU.srcs/sources_1/new/top.v:24]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'programROM' [D:/CPU/CPU.srcs/sources_1/new/programROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'inst_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_mem' (4#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'programROM' (5#1) [D:/CPU/CPU.srcs/sources_1/new/programROM.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'upg_adr_i' does not match port width (14) of module 'programROM' [D:/CPU/CPU.srcs/sources_1/new/top.v:110]
+WARNING: [Synth 8-350] instance 'rom_inst' of module 'programROM' requires 10 connections, but only 9 given [D:/CPU/CPU.srcs/sources_1/new/top.v:103]
+INFO: [Synth 8-638] synthesizing module 'IF' [D:/CPU/CPU.srcs/sources_1/new/IF.v:5]
+INFO: [Synth 8-638] synthesizing module 'PC' [D:/CPU/CPU.srcs/sources_1/new/PC.v:4]
+INFO: [Synth 8-226] default block is never used [D:/CPU/CPU.srcs/sources_1/new/PC.v:35]
+INFO: [Synth 8-256] done synthesizing module 'PC' (6#1) [D:/CPU/CPU.srcs/sources_1/new/PC.v:4]
+INFO: [Synth 8-256] done synthesizing module 'IF' (7#1) [D:/CPU/CPU.srcs/sources_1/new/IF.v:5]
+INFO: [Synth 8-638] synthesizing module 'ID' [D:/CPU/CPU.srcs/sources_1/new/ID.v:23]
+INFO: [Synth 8-638] synthesizing module 'Register' [D:/CPU/CPU.srcs/sources_1/new/Register.v:24]
+INFO: [Synth 8-256] done synthesizing module 'Register' (8#1) [D:/CPU/CPU.srcs/sources_1/new/Register.v:24]
+INFO: [Synth 8-638] synthesizing module 'GenImm' [D:/CPU/CPU.srcs/sources_1/new/GenImm.v:23]
+INFO: [Synth 8-256] done synthesizing module 'GenImm' (9#1) [D:/CPU/CPU.srcs/sources_1/new/GenImm.v:23]
+INFO: [Synth 8-638] synthesizing module 'PCselect' [D:/CPU/CPU.srcs/sources_1/new/PCselect.v:24]
+INFO: [Synth 8-638] synthesizing module 'compare' [D:/CPU/CPU.srcs/sources_1/new/compare.v:23]
+INFO: [Synth 8-256] done synthesizing module 'compare' (10#1) [D:/CPU/CPU.srcs/sources_1/new/compare.v:23]
+INFO: [Synth 8-256] done synthesizing module 'PCselect' (11#1) [D:/CPU/CPU.srcs/sources_1/new/PCselect.v:24]
+INFO: [Synth 8-256] done synthesizing module 'ID' (12#1) [D:/CPU/CPU.srcs/sources_1/new/ID.v:23]
+INFO: [Synth 8-638] synthesizing module 'Controller' [D:/CPU/CPU.srcs/sources_1/new/Controller.v:5]
+WARNING: [Synth 8-3848] Net rs1 in module/entity Controller does not have driver. [D:/CPU/CPU.srcs/sources_1/new/Controller.v:8]
+WARNING: [Synth 8-3848] Net rs2 in module/entity Controller does not have driver. [D:/CPU/CPU.srcs/sources_1/new/Controller.v:9]
+WARNING: [Synth 8-3848] Net imm in module/entity Controller does not have driver. [D:/CPU/CPU.srcs/sources_1/new/Controller.v:10]
+WARNING: [Synth 8-3848] Net RegWrite in module/entity Controller does not have driver. [D:/CPU/CPU.srcs/sources_1/new/Controller.v:15]
+INFO: [Synth 8-256] done synthesizing module 'Controller' (13#1) [D:/CPU/CPU.srcs/sources_1/new/Controller.v:5]
+WARNING: [Synth 8-350] instance 'controller' of module 'Controller' requires 16 connections, but only 15 given [D:/CPU/CPU.srcs/sources_1/new/top.v:163]
+INFO: [Synth 8-638] synthesizing module 'EX' [D:/CPU/CPU.srcs/sources_1/new/EX.v:24]
+INFO: [Synth 8-638] synthesizing module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/ALU.v:24]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (14#1) [D:/CPU/CPU.srcs/sources_1/new/ALU.v:24]
+WARNING: [Synth 8-689] width (1) of port connection 'operand1' does not match port width (32) of module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/EX.v:42]
+WARNING: [Synth 8-689] width (1) of port connection 'operand2' does not match port width (32) of module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/EX.v:43]
+INFO: [Synth 8-256] done synthesizing module 'EX' (15#1) [D:/CPU/CPU.srcs/sources_1/new/EX.v:24]
+INFO: [Synth 8-638] synthesizing module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/DMemory32.v:23]
+INFO: [Synth 8-638] synthesizing module 'data_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'data_mem' (16#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'DMemory32' (17#1) [D:/CPU/CPU.srcs/sources_1/new/DMemory32.v:23]
+WARNING: [Synth 8-689] width (1) of port connection 'upg_adr' does not match port width (14) of module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/top.v:200]
+WARNING: [Synth 8-689] width (1) of port connection 'upg_write_data' does not match port width (32) of module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/top.v:201]
+INFO: [Synth 8-638] synthesizing module 'WB' [D:/CPU/CPU.srcs/sources_1/new/WB.v:23]
+INFO: [Synth 8-256] done synthesizing module 'WB' (18#1) [D:/CPU/CPU.srcs/sources_1/new/WB.v:23]
+INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/CPU/CPU.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (19#1) [D:/CPU/CPU.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-638] synthesizing module 'switchs' [D:/CPU/CPU.srcs/sources_1/new/switchs.v:23]
+INFO: [Synth 8-256] done synthesizing module 'switchs' (20#1) [D:/CPU/CPU.srcs/sources_1/new/switchs.v:23]
+INFO: [Synth 8-638] synthesizing module 'leds' [D:/CPU/CPU.srcs/sources_1/new/leds.v:22]
+INFO: [Synth 8-256] done synthesizing module 'leds' (21#1) [D:/CPU/CPU.srcs/sources_1/new/leds.v:22]
+INFO: [Synth 8-638] synthesizing module 'segs' [D:/CPU/CPU.srcs/sources_1/new/segs.v:23]
+	Parameter cnt bound to: 5000 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/CPU/CPU.srcs/sources_1/new/segs.v:110]
+INFO: [Synth 8-226] default block is never used [D:/CPU/CPU.srcs/sources_1/new/segs.v:162]
+INFO: [Synth 8-226] default block is never used [D:/CPU/CPU.srcs/sources_1/new/segs.v:184]
+WARNING: [Synth 8-567] referenced signal 'seg_en' should be on the sensitivity list [D:/CPU/CPU.srcs/sources_1/new/segs.v:160]
+WARNING: [Synth 8-5788] Register num7_reg in module segs is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CPU/CPU.srcs/sources_1/new/segs.v:57]
+INFO: [Synth 8-256] done synthesizing module 'segs' (22#1) [D:/CPU/CPU.srcs/sources_1/new/segs.v:23]
+WARNING: [Synth 8-689] width (16) of port connection 'segwdata' does not match port width (32) of module 'segs' [D:/CPU/CPU.srcs/sources_1/new/top.v:275]
+INFO: [Synth 8-638] synthesizing module 'vgas' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:24]
+INFO: [Synth 8-638] synthesizing module 'vga_char' [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:23]
+INFO: [Synth 8-4471] merging register 'col6_reg[7:0]' into 'col0_reg[7:0]' [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:42]
+WARNING: [Synth 8-6014] Unused sequential element col6_reg was removed.  [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:42]
+INFO: [Synth 8-256] done synthesizing module 'vga_char' (23#1) [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:23]
+INFO: [Synth 8-638] synthesizing module 'vga_num_ram_module' [D:/CPU/CPU.srcs/sources_1/new/vga_num.v:23]
+INFO: [Synth 8-4471] merging register 'col6_reg[7:0]' into 'col0_reg[7:0]' [D:/CPU/CPU.srcs/sources_1/new/vga_num.v:42]
+WARNING: [Synth 8-6014] Unused sequential element col6_reg was removed.  [D:/CPU/CPU.srcs/sources_1/new/vga_num.v:42]
+INFO: [Synth 8-256] done synthesizing module 'vga_num_ram_module' (24#1) [D:/CPU/CPU.srcs/sources_1/new/vga_num.v:23]
+INFO: [Synth 8-4471] merging register 'st_reg[1][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[1][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[2][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[2][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[3][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[3][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[4][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[4][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[5][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[5][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[6][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[6][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[7][63:0]' into 'st_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[7][63:0]' into 'st1_reg[0][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[9][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[9][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[10][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[10][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[11][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[11][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[12][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[12][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[13][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[13][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[14][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[14][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[15][63:0]' into 'st_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[15][63:0]' into 'st1_reg[8][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[17][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[17][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[18][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[18][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[19][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[19][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[20][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[20][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[21][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[21][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[22][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[22][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[23][63:0]' into 'st_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[23][63:0]' into 'st1_reg[16][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[25][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[25][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[26][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[26][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[27][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[27][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[28][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[28][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[29][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[29][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[30][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[30][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[31][63:0]' into 'st_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[31][63:0]' into 'st1_reg[24][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[33][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[33][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[34][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[34][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[35][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[35][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[36][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[36][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[37][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[37][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[38][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[38][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[39][63:0]' into 'st_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[39][63:0]' into 'st1_reg[32][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[41][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[41][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[42][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[42][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[43][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[43][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[44][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[44][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[45][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[45][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[46][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[46][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[47][63:0]' into 'st_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[47][63:0]' into 'st1_reg[40][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[49][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[49][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[50][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[50][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[51][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[51][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[52][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[52][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[53][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[53][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[54][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[54][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Synth 8-4471] merging register 'st_reg[55][63:0]' into 'st_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Synth 8-4471] merging register 'st1_reg[55][63:0]' into 'st1_reg[48][63:0]' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:94]
+INFO: [Common 17-14] Message 'Synth 8-4471' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-6014] Unused sequential element st_reg[335] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[334] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[333] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[332] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[331] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[330] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[329] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[327] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[326] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[325] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[324] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[323] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[322] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[321] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[319] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[318] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[317] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[316] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[315] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[314] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[313] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[311] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[310] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[309] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[308] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[307] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[306] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[305] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[303] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[302] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[301] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[300] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[299] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[298] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[297] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[295] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[294] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[293] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[292] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[291] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[290] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[289] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[287] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[286] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[285] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[284] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[283] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[282] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[281] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[279] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[278] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[277] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[276] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[275] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[274] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[273] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[271] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[270] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[269] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[268] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[267] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[266] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[265] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[263] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[262] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[261] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[260] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[259] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[258] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[257] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[255] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[254] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[253] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[252] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[251] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[250] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[249] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[247] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[246] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[245] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[244] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[243] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[242] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[241] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[239] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[238] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[237] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[236] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[235] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[234] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[233] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[231] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[230] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[229] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[228] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[227] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[226] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+WARNING: [Synth 8-6014] Unused sequential element st_reg[225] was removed.  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:93]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-5788] Register wdata_reg in module vgas is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CPU/CPU.srcs/sources_1/new/vgas.v:159]
+WARNING: [Synth 8-3848] Net st[336] in module/entity vgas does not have driver. [D:/CPU/CPU.srcs/sources_1/new/vgas.v:48]
+WARNING: [Synth 8-3848] Net st2[392] in module/entity vgas does not have driver. [D:/CPU/CPU.srcs/sources_1/new/vgas.v:50]
+WARNING: [Synth 8-3848] Net mile_after[392] in module/entity vgas does not have driver. [D:/CPU/CPU.srcs/sources_1/new/vgas.v:51]
+WARNING: [Synth 8-3848] Net st1[336] in module/entity vgas does not have driver. [D:/CPU/CPU.srcs/sources_1/new/vgas.v:49]
+INFO: [Synth 8-256] done synthesizing module 'vgas' (25#1) [D:/CPU/CPU.srcs/sources_1/new/vgas.v:24]
+WARNING: [Synth 8-3848] Net RegWrite in module/entity top does not have driver. [D:/CPU/CPU.srcs/sources_1/new/top.v:133]
+INFO: [Synth 8-256] done synthesizing module 'top' (26#1) [D:/CPU/CPU.srcs/sources_1/new/top.v:24]
+WARNING: [Synth 8-3331] design MemOrIO has unconnected port mRead
+WARNING: [Synth 8-3331] design WB has unconnected port clk
+WARNING: [Synth 8-3331] design WB has unconnected port write_en
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[31]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[30]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[29]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[28]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[27]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[26]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[25]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[24]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[23]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[22]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[21]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[20]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[19]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[18]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[17]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[16]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[15]
+WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[14]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[31]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[30]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[29]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[28]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[27]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[26]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[25]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[24]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[23]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[22]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[21]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[20]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[19]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[18]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[17]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[16]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[15]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[14]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[13]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[12]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[11]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[10]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[9]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[8]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[7]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[6]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[5]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[4]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[3]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[2]
+WARNING: [Synth 8-3331] design EX has unconnected port rd1[1]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[31]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[30]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[29]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[28]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[27]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[26]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[25]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[24]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[23]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[22]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[21]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[20]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[19]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[18]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[17]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[16]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[15]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[14]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[13]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[12]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[11]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[10]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[9]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[8]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[7]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[6]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[5]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[4]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[3]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[2]
+WARNING: [Synth 8-3331] design EX has unconnected port rd2[1]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[31]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[30]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[29]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[28]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[27]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[26]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[25]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[24]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[23]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[22]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[21]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[20]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[19]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[18]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[17]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[16]
+WARNING: [Synth 8-3331] design EX has unconnected port imm[15]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin inst_decoder:write_en to constant 0 [D:/CPU/CPU.srcs/sources_1/new/top.v:137]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
+Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]
+Finished Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1032.117 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:55 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:55 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-6492-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 5).
+Applied set_property DONT_TOUCH = true for clk1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for dmem/dm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rom_inst/rom_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for uart_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:55 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "registers_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "registers_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "Branch" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "instType" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUOp" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "lw" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sw" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUControl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ALUControl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "divclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "let0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "let2" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "num51" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out1_reg' [D:/CPU/CPU.srcs/sources_1/new/segs.v:164]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_out2_reg' [D:/CPU/CPU.srcs/sources_1/new/segs.v:186]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:58 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'vgas_inst/char_10' (vga_char) to 'vgas_inst/char_22'
+INFO: [Synth 8-223] decloning instance 'vgas_inst/char_11' (vga_char) to 'vgas_inst/char_13'
+INFO: [Synth 8-223] decloning instance 'vgas_inst/char_11' (vga_char) to 'vgas_inst/char_25'
+INFO: [Synth 8-223] decloning instance 'vgas_inst/char_14' (vga_char) to 'vgas_inst/char_21'
+INFO: [Synth 8-223] decloning instance 'vgas_inst/char_15' (vga_char) to 'vgas_inst/char_26'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 182   
+	               32 Bit    Registers := 33    
+	               19 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 92    
+	                7 Bit    Registers := 35    
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 7     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input     14 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  32 Input      8 Bit        Muxes := 1     
+	  28 Input      7 Bit        Muxes := 70    
+	  12 Input      7 Bit        Muxes := 14    
+	   2 Input      5 Bit        Muxes := 2     
+	   9 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 44    
+	   3 Input      1 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module programROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module PC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module Register 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module GenImm 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input     32 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+Module compare 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module Controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   9 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+Module EX 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module DMemory32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module WB 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module MemOrIO 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module switchs 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module leds 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      1 Bit        Muxes := 1     
+Module segs 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     19 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               19 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     19 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	  32 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 1     
+Module vga_char 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 6     
++---Muxes : 
+	  28 Input      7 Bit        Muxes := 5     
+Module vga_num_ram_module 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 5     
++---Muxes : 
+	  12 Input      7 Bit        Muxes := 2     
+Module vgas 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 182   
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                6 Bit    Registers := 6     
+	                4 Bit    Registers := 6     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   4 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5587] ROM size for "char_0/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_0/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_0/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_0/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_0/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_1/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_1/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_1/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_1/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_1/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_2/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_2/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_2/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_2/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_2/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_3/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_3/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_3/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_3/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_3/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_4/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_4/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_4/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_4/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_4/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_5/col1" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "char_5/col2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "char_5/col3" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_5/col4" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "char_5/col5" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "controller/instType" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "controller/lw" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "controller/sw" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "executer/alu/ALUControl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "segs_inst/divclk" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let2_reg[1] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let2_reg[3]' (FDR) to 'vgas_inst/let2_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let2_reg[4] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let2_reg[0]' (FDR) to 'vgas_inst/let0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let2_reg[2]' (FDS) to 'vgas_inst/let0_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let3_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let3_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let3_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let3_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let3_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let3_reg[5] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[1]' (FDSE) to 'vgas_inst/let5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[3]' (FDSE) to 'vgas_inst/let5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[4]' (FDRE) to 'vgas_inst/let5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[0]' (FDRE) to 'vgas_inst/let5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[2]' (FDRE) to 'vgas_inst/let5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let4_reg[5]' (FDRE) to 'vgas_inst/let5_reg[1]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let5_reg[1]' (FDRE) to 'vgas_inst/let5_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let5_reg[3]' (FDRE) to 'vgas_inst/let5_reg[5]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let5_reg[4]' (FDSE) to 'vgas_inst/let5_reg[0]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let5_reg[0]' (FDSE) to 'vgas_inst/let5_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let5_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let5_reg[5] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let0_reg[0]' (FDR) to 'vgas_inst/let0_reg[4]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let0_reg[2] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/let0_reg[1]' (FDR) to 'vgas_inst/let0_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let0_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num2_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num3_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num4_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num5_reg[0] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/num5_reg[1]' (FDPE) to 'vgas_inst/num5_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/num5_reg[2]' (FDPE) to 'vgas_inst/num5_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num5_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num0_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_fetch/IF_pc/tmpPC_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[31]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[30]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[29]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[28]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[27]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[26]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[25]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[24]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[23]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[22]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[21]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[20]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[19]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[18]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[17]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[16]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[3]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[1]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[0]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[4]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[5]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[6]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[7]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[8]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[9]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[10]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[11]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[12]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[13]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[14]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst_fetch/IF_pc/tmpPC_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_0/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_0/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_0/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_0/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_1/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_1/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_1/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_1/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_1/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_2/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_2/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_2/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_2/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_2/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_3/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_3/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_3/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_3/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_3/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_4/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_4/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_4/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_4/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_4/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_5/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_5/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_5/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_5/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_5/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_0/col1_reg[7] )
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_1/col1_reg[4]' (FD) to 'vgas_inst/char_1/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_2/col1_reg[4]' (FD) to 'vgas_inst/char_2/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_3/col1_reg[4]' (FD) to 'vgas_inst/char_3/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_4/col1_reg[4]' (FD) to 'vgas_inst/char_4/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_5/col1_reg[4]' (FD) to 'vgas_inst/char_5/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/char_0/col1_reg[4]' (FD) to 'vgas_inst/char_0/col1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col4_reg[1]' (FD) to 'vga_num_ram_module:/col4_reg[4]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col4_reg[4]' (FD) to 'vga_num_ram_module:/col4_reg[5]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[0]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[1]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[2]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[3]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[4]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[5]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'vga_num_ram_module:/col0_reg[6]' (FD) to 'vga_num_ram_module:/col0_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vga_num_ram_module:/\col0_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col5_reg[7] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[0]' (FDCE) to 'segs_inst/num7_reg[3]'
+INFO: [Synth 8-3886] merging instance 'segs_inst/num7_reg[2]' (FDCE) to 'segs_inst/num7_reg[3]'
+INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[2]' (FDPE) to 'segs_inst/num4_reg[3]'
+INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[3]' (FDPE) to 'segs_inst/num4_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[31]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[30]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[29]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[28]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[27]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[26]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[25]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[24]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[23]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[22]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[21]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[20]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[19]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[18]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[17]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[16]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[3]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[1]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[0]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[4]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[5]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[6]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[7]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[8]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[9]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[10]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[11]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[12]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[13]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[14]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[15]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[16][55]' (FD) to 'vgas_inst/st_reg[16][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[24][55]' (FD) to 'vgas_inst/st_reg[24][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[32][55]' (FD) to 'vgas_inst/st_reg[32][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[40][55]' (FD) to 'vgas_inst/st_reg[40][54]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (inst_fetch/IF_pc/nextPC_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (segs_inst/seg_out1_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (segs_inst/seg_out2_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (col0_reg[7]) is unused and will be removed from module vga_num_ram_module.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[7]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[6]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[5]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[4]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[3]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[2]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[1]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_0/col0_reg[0]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][63]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][62]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][61]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][60]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][59]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][58]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][57]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][56]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][55]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][54]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][53]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][52]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][51]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][50]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][49]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][48]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][47]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][46]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][45]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][44]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][43]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][42]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][41]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][40]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][39]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][38]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][37]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][36]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][35]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][34]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][33]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][32]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][31]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][30]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][29]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][28]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][27]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][26]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][25]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][24]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][23]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][22]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][21]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][20]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][19]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][18]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][17]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][16]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][15]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][14]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][13]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][12]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][11]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][10]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][9]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][8]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][7]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][6]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][5]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][4]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][3]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][2]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][1]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st_reg[48][0]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[7]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[6]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[5]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[4]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[3]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[2]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[1]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (char_15/col5_reg[0]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][63]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][62]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][61]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][60]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][59]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][58]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][57]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][56]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][55]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][54]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][53]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][52]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][51]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][50]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][49]) is unused and will be removed from module vgas.
+WARNING: [Synth 8-3332] Sequential element (st1_reg[320][48]) is unused and will be removed from module vgas.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:24 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/cpu_clk' to pin 'clk1/bbstub_cpu_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/uart_clk' to pin 'clk1/bbstub_uart_clk/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:33 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_4/i_1405/O (GATE_2_14_OR)
+     1: i_4/i_1405/I0 (GATE_2_14_OR)
+     2: i_4/i_1404/O (GATE_2_8_AND)
+     3: i_4/i_1404/I0 (GATE_2_8_AND)
+     4: i_4/i_1405/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1405"
+Found timing loop:
+     0: i_4/i_1408/O (GATE_2_14_OR)
+     1: i_4/i_1408/I0 (GATE_2_14_OR)
+     2: i_4/i_1407/O (GATE_2_8_AND)
+     3: i_4/i_1407/I0 (GATE_2_8_AND)
+     4: i_4/i_1408/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1408"
+Found timing loop:
+     0: i_4/i_1411/O (GATE_2_14_OR)
+     1: i_4/i_1411/I0 (GATE_2_14_OR)
+     2: i_4/i_1410/O (GATE_2_8_AND)
+     3: i_4/i_1410/I0 (GATE_2_8_AND)
+     4: i_4/i_1411/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1411"
+Found timing loop:
+     0: i_4/i_1414/O (GATE_2_14_OR)
+     1: i_4/i_1414/I0 (GATE_2_14_OR)
+     2: i_4/i_1413/O (GATE_2_8_AND)
+     3: i_4/i_1413/I0 (GATE_2_8_AND)
+     4: i_4/i_1414/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1414"
+Found timing loop:
+     0: i_4/i_1419/O (GATE_2_14_OR)
+     1: i_4/i_1419/I0 (GATE_2_14_OR)
+     2: i_4/i_1418/O (GATE_2_8_AND)
+     3: i_4/i_1418/I0 (GATE_2_8_AND)
+     4: i_4/i_1419/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1419"
+Found timing loop:
+     0: i_4/i_1422/O (GATE_2_14_OR)
+     1: i_4/i_1422/I0 (GATE_2_14_OR)
+     2: i_4/i_1421/O (GATE_2_8_AND)
+     3: i_4/i_1421/I0 (GATE_2_8_AND)
+     4: i_4/i_1422/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1422"
+Found timing loop:
+     0: i_4/i_1426/O (GATE_2_14_OR)
+     1: i_4/i_1426/I0 (GATE_2_14_OR)
+     2: i_4/i_1425/O (GATE_2_8_AND)
+     3: i_4/i_1425/I0 (GATE_2_8_AND)
+     4: i_4/i_1426/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1426"
+Found timing loop:
+     0: i_4/i_1430/O (GATE_2_14_OR)
+     1: i_4/i_1430/I0 (GATE_2_14_OR)
+     2: i_4/i_1429/O (GATE_2_8_AND)
+     3: i_4/i_1429/I0 (GATE_2_8_AND)
+     4: i_4/i_1430/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1430"
+Found timing loop:
+     0: i_4/i_1433/O (GATE_2_14_OR)
+     1: i_4/i_1433/I0 (GATE_2_14_OR)
+     2: i_4/i_1432/O (GATE_2_8_AND)
+     3: i_4/i_1432/I0 (GATE_2_8_AND)
+     4: i_4/i_1433/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1433"
+Found timing loop:
+     0: i_4/i_1437/O (GATE_2_14_OR)
+     1: i_4/i_1437/I0 (GATE_2_14_OR)
+     2: i_4/i_1436/O (GATE_2_8_AND)
+     3: i_4/i_1436/I0 (GATE_2_8_AND)
+     4: i_4/i_1437/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1437"
+Found timing loop:
+     0: i_4/i_1441/O (GATE_2_14_OR)
+     1: i_4/i_1441/I0 (GATE_2_14_OR)
+     2: i_4/i_1440/O (GATE_2_8_AND)
+     3: i_4/i_1440/I0 (GATE_2_8_AND)
+     4: i_4/i_1441/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1441"
+Found timing loop:
+     0: i_4/i_1444/O (GATE_2_14_OR)
+     1: i_4/i_1444/I0 (GATE_2_14_OR)
+     2: i_4/i_1443/O (GATE_2_8_AND)
+     3: i_4/i_1443/I0 (GATE_2_8_AND)
+     4: i_4/i_1444/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1444"
+Found timing loop:
+     0: i_4/i_1447/O (GATE_2_14_OR)
+     1: i_4/i_1447/I0 (GATE_2_14_OR)
+     2: i_4/i_1446/O (GATE_2_8_AND)
+     3: i_4/i_1446/I0 (GATE_2_8_AND)
+     4: i_4/i_1447/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1447"
+Found timing loop:
+     0: i_4/i_1450/O (GATE_2_14_OR)
+     1: i_4/i_1450/I0 (GATE_2_14_OR)
+     2: i_4/i_1449/O (GATE_2_8_AND)
+     3: i_4/i_1449/I0 (GATE_2_8_AND)
+     4: i_4/i_1450/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1450"
+Found timing loop:
+     0: i_4/i_1453/O (GATE_2_14_OR)
+     1: i_4/i_1453/I0 (GATE_2_14_OR)
+     2: i_4/i_1452/O (GATE_2_8_AND)
+     3: i_4/i_1452/I0 (GATE_2_8_AND)
+     4: i_4/i_1453/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1453"
+Found timing loop:
+     0: i_4/i_1457/O (GATE_2_14_OR)
+     1: i_4/i_1457/I0 (GATE_2_14_OR)
+     2: i_4/i_1456/O (GATE_2_8_AND)
+     3: i_4/i_1456/I0 (GATE_2_8_AND)
+     4: i_4/i_1457/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1457"
+Found timing loop:
+     0: i_4/i_1463/O (GATE_2_14_OR)
+     1: i_4/i_1463/I0 (GATE_2_14_OR)
+     2: i_4/i_1462/O (GATE_2_8_AND)
+     3: i_4/i_1462/I0 (GATE_2_8_AND)
+     4: i_4/i_1463/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1463"
+Found timing loop:
+     0: i_4/i_1466/O (GATE_2_14_OR)
+     1: i_4/i_1466/I0 (GATE_2_14_OR)
+     2: i_4/i_1465/O (GATE_2_8_AND)
+     3: i_4/i_1465/I0 (GATE_2_8_AND)
+     4: i_4/i_1466/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1466"
+Found timing loop:
+     0: i_4/i_1469/O (GATE_2_14_OR)
+     1: i_4/i_1469/I0 (GATE_2_14_OR)
+     2: i_4/i_1468/O (GATE_2_8_AND)
+     3: i_4/i_1468/I0 (GATE_2_8_AND)
+     4: i_4/i_1469/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1469"
+Found timing loop:
+     0: i_4/i_1473/O (GATE_2_14_OR)
+     1: i_4/i_1473/I0 (GATE_2_14_OR)
+     2: i_4/i_1472/O (GATE_2_8_AND)
+     3: i_4/i_1472/I0 (GATE_2_8_AND)
+     4: i_4/i_1473/O (GATE_2_14_OR)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1473"
+Found timing loop:
+     0: i_4/i_1360/O (GATE_2_8_AND)
+     1: i_4/i_1360/I0 (GATE_2_8_AND)
+     2: i_4/i_1361/O (GATE_2_14_OR)
+     3: i_4/i_1361/I0 (GATE_2_14_OR)
+     4: i_4/i_1360/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1360"
+Found timing loop:
+     0: i_4/i_1363/O (GATE_2_8_AND)
+     1: i_4/i_1363/I0 (GATE_2_8_AND)
+     2: i_4/i_1364/O (GATE_2_14_OR)
+     3: i_4/i_1364/I0 (GATE_2_14_OR)
+     4: i_4/i_1363/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1363"
+Found timing loop:
+     0: i_4/i_1366/O (GATE_2_8_AND)
+     1: i_4/i_1366/I0 (GATE_2_8_AND)
+     2: i_4/i_1367/O (GATE_2_14_OR)
+     3: i_4/i_1367/I0 (GATE_2_14_OR)
+     4: i_4/i_1366/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1366"
+Found timing loop:
+     0: i_4/i_1369/O (GATE_2_8_AND)
+     1: i_4/i_1369/I0 (GATE_2_8_AND)
+     2: i_4/i_1370/O (GATE_2_14_OR)
+     3: i_4/i_1370/I0 (GATE_2_14_OR)
+     4: i_4/i_1369/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1369"
+Found timing loop:
+     0: i_4/i_1372/O (GATE_2_8_AND)
+     1: i_4/i_1372/I0 (GATE_2_8_AND)
+     2: i_4/i_1373/O (GATE_2_14_OR)
+     3: i_4/i_1373/I0 (GATE_2_14_OR)
+     4: i_4/i_1372/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1372"
+Found timing loop:
+     0: i_4/i_1375/O (GATE_2_8_AND)
+     1: i_4/i_1375/I0 (GATE_2_8_AND)
+     2: i_4/i_1376/O (GATE_2_14_OR)
+     3: i_4/i_1376/I0 (GATE_2_14_OR)
+     4: i_4/i_1375/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1375"
+Found timing loop:
+     0: i_4/i_1378/O (GATE_2_8_AND)
+     1: i_4/i_1378/I0 (GATE_2_8_AND)
+     2: i_4/i_1379/O (GATE_2_14_OR)
+     3: i_4/i_1379/I0 (GATE_2_14_OR)
+     4: i_4/i_1378/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1378"
+Found timing loop:
+     0: i_4/i_1381/O (GATE_2_8_AND)
+     1: i_4/i_1381/I0 (GATE_2_8_AND)
+     2: i_4/i_1382/O (GATE_2_14_OR)
+     3: i_4/i_1382/I0 (GATE_2_14_OR)
+     4: i_4/i_1381/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1381"
+Found timing loop:
+     0: i_4/i_1384/O (GATE_2_8_AND)
+     1: i_4/i_1384/I0 (GATE_2_8_AND)
+     2: i_4/i_1385/O (GATE_2_14_OR)
+     3: i_4/i_1385/I0 (GATE_2_14_OR)
+     4: i_4/i_1384/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1384"
+Found timing loop:
+     0: i_4/i_1387/O (GATE_2_8_AND)
+     1: i_4/i_1387/I0 (GATE_2_8_AND)
+     2: i_4/i_1388/O (GATE_2_14_OR)
+     3: i_4/i_1388/I0 (GATE_2_14_OR)
+     4: i_4/i_1387/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1387"
+Found timing loop:
+     0: i_4/i_1390/O (GATE_2_8_AND)
+     1: i_4/i_1390/I0 (GATE_2_8_AND)
+     2: i_4/i_1391/O (GATE_2_14_OR)
+     3: i_4/i_1391/I0 (GATE_2_14_OR)
+     4: i_4/i_1390/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I0 -to O i_4/i_1390"
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:45 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:01:46 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |cpuclk        |         1|
+|2     |uart_bmpg_0   |         1|
+|3     |data_mem      |         1|
+|4     |inst_mem      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |cpuclk      |     1|
+|2     |data_mem    |     1|
+|3     |inst_mem    |     1|
+|4     |uart_bmpg_0 |     1|
+|5     |BUFG        |     2|
+|6     |CARRY4      |    17|
+|7     |LUT1        |    20|
+|8     |LUT2        |    38|
+|9     |LUT3        |    62|
+|10    |LUT4        |    23|
+|11    |LUT5        |    37|
+|12    |LUT6        |    71|
+|13    |MUXF7       |    12|
+|14    |MUXF8       |     3|
+|15    |FDCE        |     3|
+|16    |FDPE        |     2|
+|17    |FDRE        |   112|
+|18    |FDSE        |     4|
+|19    |LD          |    14|
+|20    |LDC         |     2|
+|21    |IBUF        |     3|
+|22    |OBUF        |    55|
++------+------------+------+
+
+Report Instance Areas: 
++------+-------------+-----------+------+
+|      |Instance     |Module     |Cells |
++------+-------------+-----------+------+
+|1     |top          |           |   597|
+|2     |  dmem       |DMemory32  |    35|
+|3     |  inst_fetch |IF         |     3|
+|4     |    IF_pc    |PC         |     3|
+|5     |  rom_inst   |programROM |    98|
+|6     |  segs_inst  |segs       |    99|
+|7     |  vgas_inst  |vgas       |   247|
+|8     |    char_0   |vga_char   |    16|
+|9     |    char_2   |vga_char_0 |    24|
++------+-------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 31 critical warnings and 5090 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:01:36 . Memory (MB): peak = 1032.117 ; gain = 790.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:47 . Memory (MB): peak = 1032.117 ; gain = 790.641
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 14 instances
+  LDC => LDCE: 2 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+470 Infos, 323 Warnings, 31 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:51 . Memory (MB): peak = 1032.117 ; gain = 802.141
+INFO: [Common 17-1381] The checkpoint 'D:/CPU/CPU.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1032.117 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue May 21 00:29:10 2024...
