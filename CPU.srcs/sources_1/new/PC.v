@@ -23,22 +23,18 @@ module PC(
 
 
 reg [`REG_WIDTH] tmpPC;
-wire [31:0] BranchOut;  //ALU计算结果,跳转使用
+wire [31:0] BranchOut;  //ALU      ,  ??  
 
-// 这里计算PC和imm的和
-assign BranchOut = curPC + imm;
+//        PC  imm ? 
+// assign BranchOut = curPC + imm;
 
 
-//检测时钟上升沿计算新指令地址 
+//   ?       ?     ?   ? 
 always@(posedge clk)
     begin
-        case(pcSrc)   
-            1'b0:   tmpPC <= curPC + 4;
-            1'b1:   tmpPC <= BranchOut;
-            default:  tmpPC <= curPC + 4;
-        endcase
+	tmpPC <= curPC + (pcSrc)? imm : 4;
     end
-    //检测时钟下降沿更新PC或复位信号
+    //   ?   ?  ?   PC  λ ? 
     always@(negedge clk or posedge rst)
     begin
         if(rst)

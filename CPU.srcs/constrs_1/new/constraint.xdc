@@ -4,7 +4,7 @@ set_property PACKAGE_PIN P17 [get_ports clk]
 
 # rst
 set_property IOSTANDARD LVCMOS33 [get_ports fpga_rst]
-set_property PACKAGE_PIN P15 [get_ports fpga_rst]
+set_property PACKAGE_PIN R15 [get_ports fpga_rst]
 
 set_property IOSTANDARD LVCMOS33 [get_ports start_pg]
 set_property PACKAGE_PIN V1 [get_ports start_pg]
@@ -12,9 +12,9 @@ set_property PACKAGE_PIN V1 [get_ports start_pg]
 
 # uart
 set_property IOSTANDARD LVCMOS33 [get_ports rx]
-set_property PACKAGE_PIN T4 [get_ports rx]
+set_property PACKAGE_PIN N5 [get_ports rx]
 set_property IOSTANDARD LVCMOS33 [get_ports tx]
-set_property PACKAGE_PIN N5 [get_ports tx]
+set_property PACKAGE_PIN T4 [get_ports tx]
 
 
 # switch
