@@ -35,8 +35,8 @@ output  wire [`IMM_WIDTH]    ALUResult
 
     );
    
-    wire operand1 = rd1;
-    wire operand2 = ALUsrc ? imm : rd2;
+    wire [`REG_WIDTH] operand1 = rd1;
+    wire [`REG_WIDTH] operand2 = ALUsrc ? imm : rd2;
     
     ALU alu(
         .operand1(operand1),

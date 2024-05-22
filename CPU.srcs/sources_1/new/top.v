@@ -23,7 +23,7 @@
 
 module top(
 input clk,
-input fpga_rst, //Active High
+input fpga_rst, 
 input start_pg,         // Uart Start
 input [`SWITCH_WIDTH] switch,
 // UART
@@ -57,8 +57,8 @@ output              vsync     // Field synchronization signal
     
     reg upg_rst; //active high
     always @ (posedge clk) begin
-            if (spg_bufg) upg_rst    = 0;
-            if (fpga_rst) upg_rst = 1;
+            if (spg_bufg) upg_rst <= 0;
+            if (fpga_rst) upg_rst <= 1;
         end
         
     wire rst;
@@ -94,8 +94,8 @@ output              vsync     // Field synchronization signal
     wire PCSelect_back;
     
     wire upg_wen = upg_wen_o & (!upg_adr_o[14]);
-    wire upg_addr = upg_adr_o[13:0];
-    wire upg_data = upg_dat_o;
+    wire [13:0] upg_addr = upg_adr_o[13:0];
+    wire [`INST_LEN] upg_data = upg_dat_o;
     wire upg_done = upg_done_o;
 
     wire [13:0] fetch_addr;
@@ -260,7 +260,7 @@ output              vsync     // Field synchronization signal
        .IOWrite(IOWrite),
        .LEDCtrl(LEDCtrl),
        .ledaddr(addr_out[1:0]),
-       .ledwdata(write_data[15:0]),
+       .ledwdata(switchrdata),
        .led(led)
        );
        
@@ -272,7 +272,7 @@ output              vsync     // Field synchronization signal
        .IOWrite(IOWrite),
        .SEGCtrl(SEGCtrl),
        .segaddr(addr_out[1:0]),
-       .segwdata(write_data_seg[15:0]),
+       .segwdata(write_data_seg),
        .seg_en(seg_en),
        .seg_out1(seg_out1),
        .seg_out2(seg_out2)

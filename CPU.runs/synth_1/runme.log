@@ -14,22 +14,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18536 
+INFO: Helper process launched with PID 22536 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 344.281 ; gain = 102.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 344.711 ; gain = 102.832
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [D:/CPU/CPU.srcs/sources_1/new/top.v:24]
 INFO: [Synth 8-638] synthesizing module 'BUFG' [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (1#1) [D:/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'cpuclk' (2#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'uart_bmpg_0' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'uart_bmpg_0' (3#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/uart_bmpg_0_stub.v:6]
 INFO: [Synth 8-638] synthesizing module 'programROM' [D:/CPU/CPU.srcs/sources_1/new/programROM.v:23]
-INFO: [Synth 8-638] synthesizing module 'inst_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'inst_mem' (4#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'inst_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'inst_mem' (4#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/inst_mem_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'programROM' (5#1) [D:/CPU/CPU.srcs/sources_1/new/programROM.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'upg_adr_i' does not match port width (14) of module 'programROM' [D:/CPU/CPU.srcs/sources_1/new/top.v:110]
 WARNING: [Synth 8-350] instance 'rom_inst' of module 'programROM' requires 10 connections, but only 9 given [D:/CPU/CPU.srcs/sources_1/new/top.v:103]
 INFO: [Synth 8-638] synthesizing module 'IF' [D:/CPU/CPU.srcs/sources_1/new/IF.v:5]
 INFO: [Synth 8-638] synthesizing module 'PC' [D:/CPU/CPU.srcs/sources_1/new/PC.v:4]
@@ -55,15 +54,11 @@ WARNING: [Synth 8-350] instance 'controller' of module 'Controller' requires 16 
 INFO: [Synth 8-638] synthesizing module 'EX' [D:/CPU/CPU.srcs/sources_1/new/EX.v:24]
 INFO: [Synth 8-638] synthesizing module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/ALU.v:24]
 INFO: [Synth 8-256] done synthesizing module 'ALU' (14#1) [D:/CPU/CPU.srcs/sources_1/new/ALU.v:24]
-WARNING: [Synth 8-689] width (1) of port connection 'operand1' does not match port width (32) of module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/EX.v:42]
-WARNING: [Synth 8-689] width (1) of port connection 'operand2' does not match port width (32) of module 'ALU' [D:/CPU/CPU.srcs/sources_1/new/EX.v:43]
 INFO: [Synth 8-256] done synthesizing module 'EX' (15#1) [D:/CPU/CPU.srcs/sources_1/new/EX.v:24]
 INFO: [Synth 8-638] synthesizing module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/DMemory32.v:23]
-INFO: [Synth 8-638] synthesizing module 'data_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'data_mem' (16#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'data_mem' [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'data_mem' (16#1) [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/realtime/data_mem_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'DMemory32' (17#1) [D:/CPU/CPU.srcs/sources_1/new/DMemory32.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'upg_adr' does not match port width (14) of module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/top.v:200]
-WARNING: [Synth 8-689] width (1) of port connection 'upg_write_data' does not match port width (32) of module 'DMemory32' [D:/CPU/CPU.srcs/sources_1/new/top.v:201]
 INFO: [Synth 8-638] synthesizing module 'WB' [D:/CPU/CPU.srcs/sources_1/new/WB.v:23]
 INFO: [Synth 8-256] done synthesizing module 'WB' (18#1) [D:/CPU/CPU.srcs/sources_1/new/WB.v:23]
 INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/CPU/CPU.srcs/sources_1/new/MemOrIO.v:23]
@@ -80,7 +75,6 @@ INFO: [Synth 8-226] default block is never used [D:/CPU/CPU.srcs/sources_1/new/s
 WARNING: [Synth 8-567] referenced signal 'seg_en' should be on the sensitivity list [D:/CPU/CPU.srcs/sources_1/new/segs.v:160]
 WARNING: [Synth 8-5788] Register num7_reg in module segs is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/CPU/CPU.srcs/sources_1/new/segs.v:57]
 INFO: [Synth 8-256] done synthesizing module 'segs' (22#1) [D:/CPU/CPU.srcs/sources_1/new/segs.v:23]
-WARNING: [Synth 8-689] width (16) of port connection 'segwdata' does not match port width (32) of module 'segs' [D:/CPU/CPU.srcs/sources_1/new/top.v:275]
 INFO: [Synth 8-638] synthesizing module 'vgas' [D:/CPU/CPU.srcs/sources_1/new/vgas.v:24]
 INFO: [Synth 8-638] synthesizing module 'vga_char' [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:23]
 INFO: [Synth 8-4471] merging register 'col6_reg[7:0]' into 'col0_reg[7:0]' [D:/CPU/CPU.srcs/sources_1/new/vga_char.v:42]
@@ -317,88 +311,88 @@ WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[17]
 WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[16]
 WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[15]
 WARNING: [Synth 8-3331] design DMemory32 has unconnected port mem_address[14]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[31]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[30]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[29]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[28]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[27]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[26]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[25]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[24]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[23]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[22]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[21]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[20]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[19]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[18]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[17]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[16]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[15]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[14]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[13]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[12]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[11]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[10]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[9]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[8]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[7]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[6]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[5]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[4]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[3]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[2]
-WARNING: [Synth 8-3331] design EX has unconnected port rd1[1]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[31]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[30]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[29]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[28]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[27]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[26]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[25]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[24]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[23]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[22]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[21]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[20]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[19]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[18]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[17]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[16]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[15]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[14]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[13]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[12]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[11]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[10]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[9]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[8]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[7]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[6]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[5]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[4]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[3]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[2]
-WARNING: [Synth 8-3331] design EX has unconnected port rd2[1]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[31]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[30]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[29]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[28]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[27]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[26]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[25]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[24]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[23]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[22]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[21]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[20]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[19]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[18]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[17]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[16]
-WARNING: [Synth 8-3331] design EX has unconnected port imm[15]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[31]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[30]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[29]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[28]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[27]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[26]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[25]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[24]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[23]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[22]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[21]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[20]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[19]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[18]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[17]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[16]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[15]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[14]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[13]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[12]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[11]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[10]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[9]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[8]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[7]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[6]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[5]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[4]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[3]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[2]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[1]
+WARNING: [Synth 8-3331] design EX has unconnected port pc[0]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs1[4]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs1[3]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs1[2]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs1[1]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs1[0]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs2[4]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs2[3]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs2[2]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs2[1]
+WARNING: [Synth 8-3331] design Controller has unconnected port rs2[0]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[31]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[30]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[29]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[28]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[27]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[26]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[25]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[24]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[23]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[22]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[21]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[20]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[19]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[18]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[17]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[16]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[15]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[14]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[13]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[12]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[11]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[10]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[9]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[8]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[7]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[6]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[5]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[4]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[3]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[2]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[1]
+WARNING: [Synth 8-3331] design Controller has unconnected port imm[0]
+WARNING: [Synth 8-3331] design Controller has unconnected port RegWrite
+WARNING: [Synth 8-3331] design Controller has unconnected port inst[24]
+WARNING: [Synth 8-3331] design Controller has unconnected port inst[23]
+WARNING: [Synth 8-3331] design Controller has unconnected port inst[22]
+WARNING: [Synth 8-3331] design Controller has unconnected port inst[21]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:27 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -409,21 +403,21 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 WARNING: [Synth 8-3295] tying undriven pin inst_decoder:write_en to constant 0 [D:/CPU/CPU.srcs/sources_1/new/top.v:137]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:01:00 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:27 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
-Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
-Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
-Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
-Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
-Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
-Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
-Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp4/data_mem_in_context.xdc] for cell 'rom_inst/rom_inst'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp5/uart_bmpg_0_in_context.xdc] for cell 'uart_inst'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc] for cell 'clk1'
+Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
+Finished Parsing XDC File [D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp7/data_mem_in_context.xdc] for cell 'dmem/dm'
 Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]
 Finished Parsing XDC File [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/CPU/CPU.srcs/constrs_1/new/constraint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
@@ -435,28 +429,28 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1032.258 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1033.285 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:01:26 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:01:26 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-15712-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  D:/CPU/CPU.runs/synth_1/.Xil/Vivado-3708-LAPTOP-14CM3F3C/dcp6/cpuclk_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for clk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for dmem/dm. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for rom_inst/rom_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:26 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:38 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "registers_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "registers_reg[30]" won't be mapped to RAM because it is too sparse
@@ -513,7 +507,7 @@ INFO: [Synth 8-5544] ROM "num51" won't be mapped to Block RAM because address si
 WARNING: [Synth 8-327] inferring latch for variable 'seg_out1_reg' [D:/CPU/CPU.srcs/sources_1/new/segs.v:164]
 WARNING: [Synth 8-327] inferring latch for variable 'seg_out2_reg' [D:/CPU/CPU.srcs/sources_1/new/segs.v:186]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:01:32 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:40 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'vgas_inst/char_10' (vga_char) to 'vgas_inst/char_22'
 INFO: [Synth 8-223] decloning instance 'vgas_inst/char_11' (vga_char) to 'vgas_inst/char_13'
@@ -552,7 +546,7 @@ Detailed RTL Component Info :
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
+	   2 Input     32 Bit        Muxes := 8     
 	   6 Input     32 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 3     
@@ -575,7 +569,7 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 44    
+	   2 Input      1 Bit        Muxes := 43    
 	   3 Input      1 Bit        Muxes := 2     
 	  17 Input      1 Bit        Muxes := 1     
 	  16 Input      1 Bit        Muxes := 1     
@@ -640,7 +634,7 @@ Detailed RTL Component Info :
 Module EX 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 Module DMemory32 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -772,22 +766,6 @@ INFO: [Synth 8-5546] ROM "controller/lw" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "controller/sw" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "executer/alu/ALUControl" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "segs_inst/divclk" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\wdata_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let1_reg[1] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let1_reg[3] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let1_reg[4] )
@@ -822,30 +800,9 @@ INFO: [Synth 8-3886] merging instance 'vgas_inst/let0_reg[0]' (FDR) to 'vgas_ins
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\let0_reg[2] )
 INFO: [Synth 8-3886] merging instance 'vgas_inst/let0_reg[1]' (FDR) to 'vgas_inst/let0_reg[4]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\let0_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num2_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num2_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num3_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num3_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num4_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num4_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num5_reg[0] )
-INFO: [Synth 8-3886] merging instance 'vgas_inst/num5_reg[1]' (FDPE) to 'vgas_inst/num5_reg[3]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/num5_reg[1]' (FDPE) to 'vgas_inst/num5_reg[2]'
 INFO: [Synth 8-3886] merging instance 'vgas_inst/num5_reg[2]' (FDPE) to 'vgas_inst/num5_reg[3]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num5_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num0_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num0_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\num1_reg[0] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[2] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\num1_reg[3] )
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst_fetch/IF_pc/tmpPC_reg[2] )
 INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[31]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
 INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/tmpPC_reg[30]' (FD) to 'inst_fetch/IF_pc/tmpPC_reg[3]'
@@ -934,11 +891,44 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col2_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col1_reg[7] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col5_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col3_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col4_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col2_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_20/col5_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col3_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col4_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col5_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_23/col4_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_23/col2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_20/col1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col5_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col3_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_23/col3_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col4_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col2_reg[6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col5_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col3_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_20/col4_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_23/col5_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col4_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_20/col1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col5_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col3_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_23/col3_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col4_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_23/col1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_24/col2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (vgas_inst/\char_24/col1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (vgas_inst/\char_20/col5_reg[4] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[0]' (FDCE) to 'segs_inst/num7_reg[3]'
-INFO: [Synth 8-3886] merging instance 'segs_inst/num7_reg[2]' (FDCE) to 'segs_inst/num7_reg[3]'
-INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[2]' (FDPE) to 'segs_inst/num4_reg[3]'
-INFO: [Synth 8-3886] merging instance 'segs_inst/num4_reg[3]' (FDPE) to 'segs_inst/num4_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[31]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
 INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[30]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
 INFO: [Synth 8-3886] merging instance 'inst_fetch/IF_pc/nextPC_reg[29]' (FDC_1) to 'inst_fetch/IF_pc/nextPC_reg[3]'
@@ -973,6 +963,10 @@ INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[16][55]' (FD) to 'vgas_i
 INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[24][55]' (FD) to 'vgas_inst/st_reg[24][54]'
 INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[32][55]' (FD) to 'vgas_inst/st_reg[32][54]'
 INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[40][55]' (FD) to 'vgas_inst/st_reg[40][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[64][55]' (FD) to 'vgas_inst/st_reg[64][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[72][55]' (FD) to 'vgas_inst/st_reg[72][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[80][55]' (FD) to 'vgas_inst/st_reg[80][54]'
+INFO: [Synth 8-3886] merging instance 'vgas_inst/st_reg[88][55]' (FD) to 'vgas_inst/st_reg[88][54]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (inst_fetch/IF_pc/nextPC_reg[15]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (segs_inst/seg_out1_reg[0]) is unused and will be removed from module top.
@@ -1076,7 +1070,7 @@ WARNING: [Synth 8-3332] Sequential element (st1_reg[320][49]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (st1_reg[320][48]) is unused and will be removed from module vgas.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:02:21 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:02:11 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1091,261 +1085,269 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/cpu_clk' to pin 'clk
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk1/uart_clk' to pin 'clk1/bbstub_uart_clk/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:02:38 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:02:29 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 Found timing loop:
-     0: i_4/i_1405/O (GATE_2_14_OR)
-     1: i_4/i_1405/I0 (GATE_2_14_OR)
-     2: i_4/i_1404/O (GATE_2_8_AND)
-     3: i_4/i_1404/I0 (GATE_2_8_AND)
-     4: i_4/i_1405/O (GATE_2_14_OR)
+     0: i_36/i_237/Z (MUX1)
+     1: i_36/i_237/A (MUX1)
+     2: i_36/i_269/O (GATE_2_8_AND)
+     3: i_36/i_269/I1 (GATE_2_8_AND)
+     4: i_36/i_237/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1405"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_237"
 Found timing loop:
-     0: i_4/i_1408/O (GATE_2_14_OR)
-     1: i_4/i_1408/I0 (GATE_2_14_OR)
-     2: i_4/i_1407/O (GATE_2_8_AND)
-     3: i_4/i_1407/I0 (GATE_2_8_AND)
-     4: i_4/i_1408/O (GATE_2_14_OR)
+     0: i_36/i_236/Z (MUX1)
+     1: i_36/i_236/A (MUX1)
+     2: i_36/i_268/O (GATE_2_8_AND)
+     3: i_36/i_268/I1 (GATE_2_8_AND)
+     4: i_36/i_236/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1408"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_236"
 Found timing loop:
-     0: i_4/i_1411/O (GATE_2_14_OR)
-     1: i_4/i_1411/I0 (GATE_2_14_OR)
-     2: i_4/i_1410/O (GATE_2_8_AND)
-     3: i_4/i_1410/I0 (GATE_2_8_AND)
-     4: i_4/i_1411/O (GATE_2_14_OR)
+     0: i_36/i_235/Z (MUX1)
+     1: i_36/i_235/A (MUX1)
+     2: i_36/i_267/O (GATE_2_8_AND)
+     3: i_36/i_267/I1 (GATE_2_8_AND)
+     4: i_36/i_235/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1411"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_235"
 Found timing loop:
-     0: i_4/i_1414/O (GATE_2_14_OR)
-     1: i_4/i_1414/I0 (GATE_2_14_OR)
-     2: i_4/i_1413/O (GATE_2_8_AND)
-     3: i_4/i_1413/I0 (GATE_2_8_AND)
-     4: i_4/i_1414/O (GATE_2_14_OR)
+     0: i_36/i_234/Z (MUX1)
+     1: i_36/i_234/A (MUX1)
+     2: i_36/i_266/O (GATE_2_8_AND)
+     3: i_36/i_266/I1 (GATE_2_8_AND)
+     4: i_36/i_234/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1414"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_234"
 Found timing loop:
-     0: i_4/i_1419/O (GATE_2_14_OR)
-     1: i_4/i_1419/I0 (GATE_2_14_OR)
-     2: i_4/i_1418/O (GATE_2_8_AND)
-     3: i_4/i_1418/I0 (GATE_2_8_AND)
-     4: i_4/i_1419/O (GATE_2_14_OR)
+     0: i_36/i_233/Z (MUX1)
+     1: i_36/i_233/A (MUX1)
+     2: i_36/i_265/O (GATE_2_8_AND)
+     3: i_36/i_265/I1 (GATE_2_8_AND)
+     4: i_36/i_233/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1419"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_233"
 Found timing loop:
-     0: i_4/i_1422/O (GATE_2_14_OR)
-     1: i_4/i_1422/I0 (GATE_2_14_OR)
-     2: i_4/i_1421/O (GATE_2_8_AND)
-     3: i_4/i_1421/I0 (GATE_2_8_AND)
-     4: i_4/i_1422/O (GATE_2_14_OR)
+     0: i_36/i_232/Z (MUX1)
+     1: i_36/i_232/A (MUX1)
+     2: i_36/i_264/O (GATE_2_8_AND)
+     3: i_36/i_264/I1 (GATE_2_8_AND)
+     4: i_36/i_232/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1422"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_232"
 Found timing loop:
-     0: i_4/i_1426/O (GATE_2_14_OR)
-     1: i_4/i_1426/I0 (GATE_2_14_OR)
-     2: i_4/i_1425/O (GATE_2_8_AND)
-     3: i_4/i_1425/I0 (GATE_2_8_AND)
-     4: i_4/i_1426/O (GATE_2_14_OR)
+     0: i_36/i_231/Z (MUX1)
+     1: i_36/i_231/A (MUX1)
+     2: i_36/i_263/O (GATE_2_8_AND)
+     3: i_36/i_263/I1 (GATE_2_8_AND)
+     4: i_36/i_231/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1426"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_231"
 Found timing loop:
-     0: i_4/i_1430/O (GATE_2_14_OR)
-     1: i_4/i_1430/I0 (GATE_2_14_OR)
-     2: i_4/i_1429/O (GATE_2_8_AND)
-     3: i_4/i_1429/I0 (GATE_2_8_AND)
-     4: i_4/i_1430/O (GATE_2_14_OR)
+     0: i_36/i_230/Z (MUX1)
+     1: i_36/i_230/A (MUX1)
+     2: i_36/i_262/O (GATE_2_8_AND)
+     3: i_36/i_262/I1 (GATE_2_8_AND)
+     4: i_36/i_230/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1430"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_230"
 Found timing loop:
-     0: i_4/i_1433/O (GATE_2_14_OR)
-     1: i_4/i_1433/I0 (GATE_2_14_OR)
-     2: i_4/i_1432/O (GATE_2_8_AND)
-     3: i_4/i_1432/I0 (GATE_2_8_AND)
-     4: i_4/i_1433/O (GATE_2_14_OR)
+     0: i_36/i_229/Z (MUX1)
+     1: i_36/i_229/A (MUX1)
+     2: i_36/i_261/O (GATE_2_8_AND)
+     3: i_36/i_261/I1 (GATE_2_8_AND)
+     4: i_36/i_229/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1433"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_229"
 Found timing loop:
-     0: i_4/i_1437/O (GATE_2_14_OR)
-     1: i_4/i_1437/I0 (GATE_2_14_OR)
-     2: i_4/i_1436/O (GATE_2_8_AND)
-     3: i_4/i_1436/I0 (GATE_2_8_AND)
-     4: i_4/i_1437/O (GATE_2_14_OR)
+     0: i_36/i_228/Z (MUX1)
+     1: i_36/i_228/A (MUX1)
+     2: i_36/i_260/O (GATE_2_8_AND)
+     3: i_36/i_260/I1 (GATE_2_8_AND)
+     4: i_36/i_228/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1437"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_228"
 Found timing loop:
-     0: i_4/i_1441/O (GATE_2_14_OR)
-     1: i_4/i_1441/I0 (GATE_2_14_OR)
-     2: i_4/i_1440/O (GATE_2_8_AND)
-     3: i_4/i_1440/I0 (GATE_2_8_AND)
-     4: i_4/i_1441/O (GATE_2_14_OR)
+     0: i_36/i_227/Z (MUX1)
+     1: i_36/i_227/A (MUX1)
+     2: i_36/i_259/O (GATE_2_8_AND)
+     3: i_36/i_259/I1 (GATE_2_8_AND)
+     4: i_36/i_227/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1441"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_227"
 Found timing loop:
-     0: i_4/i_1444/O (GATE_2_14_OR)
-     1: i_4/i_1444/I0 (GATE_2_14_OR)
-     2: i_4/i_1443/O (GATE_2_8_AND)
-     3: i_4/i_1443/I0 (GATE_2_8_AND)
-     4: i_4/i_1444/O (GATE_2_14_OR)
+     0: i_36/i_226/Z (MUX1)
+     1: i_36/i_226/A (MUX1)
+     2: i_36/i_258/O (GATE_2_8_AND)
+     3: i_36/i_258/I1 (GATE_2_8_AND)
+     4: i_36/i_226/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1444"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_226"
 Found timing loop:
-     0: i_4/i_1447/O (GATE_2_14_OR)
-     1: i_4/i_1447/I0 (GATE_2_14_OR)
-     2: i_4/i_1446/O (GATE_2_8_AND)
-     3: i_4/i_1446/I0 (GATE_2_8_AND)
-     4: i_4/i_1447/O (GATE_2_14_OR)
+     0: i_36/i_225/Z (MUX1)
+     1: i_36/i_225/A (MUX1)
+     2: i_36/i_257/O (GATE_2_8_AND)
+     3: i_36/i_257/I1 (GATE_2_8_AND)
+     4: i_36/i_225/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1447"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_225"
 Found timing loop:
-     0: i_4/i_1450/O (GATE_2_14_OR)
-     1: i_4/i_1450/I0 (GATE_2_14_OR)
-     2: i_4/i_1449/O (GATE_2_8_AND)
-     3: i_4/i_1449/I0 (GATE_2_8_AND)
-     4: i_4/i_1450/O (GATE_2_14_OR)
+     0: i_36/i_224/Z (MUX1)
+     1: i_36/i_224/A (MUX1)
+     2: i_36/i_256/O (GATE_2_8_AND)
+     3: i_36/i_256/I1 (GATE_2_8_AND)
+     4: i_36/i_224/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1450"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_224"
 Found timing loop:
-     0: i_4/i_1453/O (GATE_2_14_OR)
-     1: i_4/i_1453/I0 (GATE_2_14_OR)
-     2: i_4/i_1452/O (GATE_2_8_AND)
-     3: i_4/i_1452/I0 (GATE_2_8_AND)
-     4: i_4/i_1453/O (GATE_2_14_OR)
+     0: i_36/i_223/Z (MUX1)
+     1: i_36/i_223/A (MUX1)
+     2: i_36/i_255/O (GATE_2_8_AND)
+     3: i_36/i_255/I1 (GATE_2_8_AND)
+     4: i_36/i_223/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1453"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_223"
 Found timing loop:
-     0: i_4/i_1457/O (GATE_2_14_OR)
-     1: i_4/i_1457/I0 (GATE_2_14_OR)
-     2: i_4/i_1456/O (GATE_2_8_AND)
-     3: i_4/i_1456/I0 (GATE_2_8_AND)
-     4: i_4/i_1457/O (GATE_2_14_OR)
+     0: i_36/i_222/Z (MUX1)
+     1: i_36/i_222/A (MUX1)
+     2: i_36/i_254/O (GATE_2_8_AND)
+     3: i_36/i_254/I1 (GATE_2_8_AND)
+     4: i_36/i_222/Z (MUX1)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1457"
+Inferred a: "set_disable_timing -from A -to Z i_36/i_222"
 Found timing loop:
-     0: i_4/i_1463/O (GATE_2_14_OR)
-     1: i_4/i_1463/I0 (GATE_2_14_OR)
-     2: i_4/i_1462/O (GATE_2_8_AND)
-     3: i_4/i_1462/I0 (GATE_2_8_AND)
-     4: i_4/i_1463/O (GATE_2_14_OR)
+     0: i_36/i_270/O (GATE_2_8_AND)
+     1: i_36/i_270/I1 (GATE_2_8_AND)
+     2: i_36/i_238/Z (MUX1)
+     3: i_36/i_238/A (MUX1)
+     4: i_36/i_270/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1463"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_270"
 Found timing loop:
-     0: i_4/i_1466/O (GATE_2_14_OR)
-     1: i_4/i_1466/I0 (GATE_2_14_OR)
-     2: i_4/i_1465/O (GATE_2_8_AND)
-     3: i_4/i_1465/I0 (GATE_2_8_AND)
-     4: i_4/i_1466/O (GATE_2_14_OR)
+     0: i_36/i_271/O (GATE_2_8_AND)
+     1: i_36/i_271/I1 (GATE_2_8_AND)
+     2: i_36/i_239/Z (MUX1)
+     3: i_36/i_239/A (MUX1)
+     4: i_36/i_271/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1466"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_271"
 Found timing loop:
-     0: i_4/i_1469/O (GATE_2_14_OR)
-     1: i_4/i_1469/I0 (GATE_2_14_OR)
-     2: i_4/i_1468/O (GATE_2_8_AND)
-     3: i_4/i_1468/I0 (GATE_2_8_AND)
-     4: i_4/i_1469/O (GATE_2_14_OR)
+     0: i_36/i_272/O (GATE_2_8_AND)
+     1: i_36/i_272/I1 (GATE_2_8_AND)
+     2: i_36/i_240/Z (MUX1)
+     3: i_36/i_240/A (MUX1)
+     4: i_36/i_272/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1469"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_272"
 Found timing loop:
-     0: i_4/i_1473/O (GATE_2_14_OR)
-     1: i_4/i_1473/I0 (GATE_2_14_OR)
-     2: i_4/i_1472/O (GATE_2_8_AND)
-     3: i_4/i_1472/I0 (GATE_2_8_AND)
-     4: i_4/i_1473/O (GATE_2_14_OR)
+     0: i_36/i_273/O (GATE_2_8_AND)
+     1: i_36/i_273/I1 (GATE_2_8_AND)
+     2: i_36/i_241/Z (MUX1)
+     3: i_36/i_241/A (MUX1)
+     4: i_36/i_273/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1473"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_273"
 Found timing loop:
-     0: i_4/i_1360/O (GATE_2_8_AND)
-     1: i_4/i_1360/I0 (GATE_2_8_AND)
-     2: i_4/i_1361/O (GATE_2_14_OR)
-     3: i_4/i_1361/I0 (GATE_2_14_OR)
-     4: i_4/i_1360/O (GATE_2_8_AND)
+     0: i_36/i_274/O (GATE_2_8_AND)
+     1: i_36/i_274/I1 (GATE_2_8_AND)
+     2: i_36/i_242/Z (MUX1)
+     3: i_36/i_242/A (MUX1)
+     4: i_36/i_274/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1360"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_274"
 Found timing loop:
-     0: i_4/i_1363/O (GATE_2_8_AND)
-     1: i_4/i_1363/I0 (GATE_2_8_AND)
-     2: i_4/i_1364/O (GATE_2_14_OR)
-     3: i_4/i_1364/I0 (GATE_2_14_OR)
-     4: i_4/i_1363/O (GATE_2_8_AND)
+     0: i_36/i_275/O (GATE_2_8_AND)
+     1: i_36/i_275/I1 (GATE_2_8_AND)
+     2: i_36/i_243/Z (MUX1)
+     3: i_36/i_243/A (MUX1)
+     4: i_36/i_275/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1363"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_275"
 Found timing loop:
-     0: i_4/i_1366/O (GATE_2_8_AND)
-     1: i_4/i_1366/I0 (GATE_2_8_AND)
-     2: i_4/i_1367/O (GATE_2_14_OR)
-     3: i_4/i_1367/I0 (GATE_2_14_OR)
-     4: i_4/i_1366/O (GATE_2_8_AND)
+     0: i_36/i_276/O (GATE_2_8_AND)
+     1: i_36/i_276/I1 (GATE_2_8_AND)
+     2: i_36/i_244/Z (MUX1)
+     3: i_36/i_244/A (MUX1)
+     4: i_36/i_276/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1366"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_276"
 Found timing loop:
-     0: i_4/i_1369/O (GATE_2_8_AND)
-     1: i_4/i_1369/I0 (GATE_2_8_AND)
-     2: i_4/i_1370/O (GATE_2_14_OR)
-     3: i_4/i_1370/I0 (GATE_2_14_OR)
-     4: i_4/i_1369/O (GATE_2_8_AND)
+     0: i_36/i_277/O (GATE_2_8_AND)
+     1: i_36/i_277/I1 (GATE_2_8_AND)
+     2: i_36/i_245/Z (MUX1)
+     3: i_36/i_245/A (MUX1)
+     4: i_36/i_277/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1369"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_277"
 Found timing loop:
-     0: i_4/i_1372/O (GATE_2_8_AND)
-     1: i_4/i_1372/I0 (GATE_2_8_AND)
-     2: i_4/i_1373/O (GATE_2_14_OR)
-     3: i_4/i_1373/I0 (GATE_2_14_OR)
-     4: i_4/i_1372/O (GATE_2_8_AND)
+     0: i_36/i_278/O (GATE_2_8_AND)
+     1: i_36/i_278/I1 (GATE_2_8_AND)
+     2: i_36/i_246/Z (MUX1)
+     3: i_36/i_246/A (MUX1)
+     4: i_36/i_278/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1372"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_278"
 Found timing loop:
-     0: i_4/i_1375/O (GATE_2_8_AND)
-     1: i_4/i_1375/I0 (GATE_2_8_AND)
-     2: i_4/i_1376/O (GATE_2_14_OR)
-     3: i_4/i_1376/I0 (GATE_2_14_OR)
-     4: i_4/i_1375/O (GATE_2_8_AND)
+     0: i_36/i_279/O (GATE_2_8_AND)
+     1: i_36/i_279/I1 (GATE_2_8_AND)
+     2: i_36/i_247/Z (MUX1)
+     3: i_36/i_247/A (MUX1)
+     4: i_36/i_279/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1375"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_279"
 Found timing loop:
-     0: i_4/i_1378/O (GATE_2_8_AND)
-     1: i_4/i_1378/I0 (GATE_2_8_AND)
-     2: i_4/i_1379/O (GATE_2_14_OR)
-     3: i_4/i_1379/I0 (GATE_2_14_OR)
-     4: i_4/i_1378/O (GATE_2_8_AND)
+     0: i_36/i_280/O (GATE_2_8_AND)
+     1: i_36/i_280/I1 (GATE_2_8_AND)
+     2: i_36/i_248/Z (MUX1)
+     3: i_36/i_248/A (MUX1)
+     4: i_36/i_280/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1378"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_280"
 Found timing loop:
-     0: i_4/i_1381/O (GATE_2_8_AND)
-     1: i_4/i_1381/I0 (GATE_2_8_AND)
-     2: i_4/i_1382/O (GATE_2_14_OR)
-     3: i_4/i_1382/I0 (GATE_2_14_OR)
-     4: i_4/i_1381/O (GATE_2_8_AND)
+     0: i_36/i_281/O (GATE_2_8_AND)
+     1: i_36/i_281/I1 (GATE_2_8_AND)
+     2: i_36/i_249/Z (MUX1)
+     3: i_36/i_249/A (MUX1)
+     4: i_36/i_281/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1381"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_281"
 Found timing loop:
-     0: i_4/i_1384/O (GATE_2_8_AND)
-     1: i_4/i_1384/I0 (GATE_2_8_AND)
-     2: i_4/i_1385/O (GATE_2_14_OR)
-     3: i_4/i_1385/I0 (GATE_2_14_OR)
-     4: i_4/i_1384/O (GATE_2_8_AND)
+     0: i_36/i_282/O (GATE_2_8_AND)
+     1: i_36/i_282/I1 (GATE_2_8_AND)
+     2: i_36/i_250/Z (MUX1)
+     3: i_36/i_250/A (MUX1)
+     4: i_36/i_282/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1384"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_282"
 Found timing loop:
-     0: i_4/i_1387/O (GATE_2_8_AND)
-     1: i_4/i_1387/I0 (GATE_2_8_AND)
-     2: i_4/i_1388/O (GATE_2_14_OR)
-     3: i_4/i_1388/I0 (GATE_2_14_OR)
-     4: i_4/i_1387/O (GATE_2_8_AND)
+     0: i_36/i_283/O (GATE_2_8_AND)
+     1: i_36/i_283/I1 (GATE_2_8_AND)
+     2: i_36/i_251/Z (MUX1)
+     3: i_36/i_251/A (MUX1)
+     4: i_36/i_283/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1387"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_283"
 Found timing loop:
-     0: i_4/i_1390/O (GATE_2_8_AND)
-     1: i_4/i_1390/I0 (GATE_2_8_AND)
-     2: i_4/i_1391/O (GATE_2_14_OR)
-     3: i_4/i_1391/I0 (GATE_2_14_OR)
-     4: i_4/i_1390/O (GATE_2_8_AND)
+     0: i_36/i_284/O (GATE_2_8_AND)
+     1: i_36/i_284/I1 (GATE_2_8_AND)
+     2: i_36/i_252/Z (MUX1)
+     3: i_36/i_252/A (MUX1)
+     4: i_36/i_284/O (GATE_2_8_AND)
 CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
-Inferred a: "set_disable_timing -from I0 -to O i_4/i_1390"
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_284"
+Found timing loop:
+     0: i_36/i_285/O (GATE_2_8_AND)
+     1: i_36/i_285/I1 (GATE_2_8_AND)
+     2: i_36/i_253/Z (MUX1)
+     3: i_36/i_253/A (MUX1)
+     4: i_36/i_285/O (GATE_2_8_AND)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [D:/CPU/CPU.srcs/sources_1/new/ALU.v:35]
+Inferred a: "set_disable_timing -from I1 -to O i_36/i_285"
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:03:03 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:02:52 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1357,7 +1359,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:26 ; elapsed = 00:03:03 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:02:55 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1381,7 +1383,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1394,7 +1396,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1406,25 +1408,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1449,47 +1451,57 @@ Report Cell Usage:
 |3     |inst_mem    |     1|
 |4     |uart_bmpg_0 |     1|
 |5     |BUFG        |     2|
-|6     |CARRY4      |    17|
-|7     |LUT1        |    20|
-|8     |LUT2        |    38|
-|9     |LUT3        |    62|
-|10    |LUT4        |    23|
-|11    |LUT5        |    37|
-|12    |LUT6        |    71|
-|13    |MUXF7       |    12|
-|14    |MUXF8       |     3|
-|15    |FDCE        |     3|
-|16    |FDPE        |     2|
-|17    |FDRE        |   112|
+|6     |CARRY4      |    84|
+|7     |LUT1        |    52|
+|8     |LUT2        |   180|
+|9     |LUT3        |   167|
+|10    |LUT4        |   346|
+|11    |LUT5        |   158|
+|12    |LUT6        |   362|
+|13    |MUXF7       |    52|
+|14    |MUXF8       |     2|
+|15    |FDCE        |    50|
+|16    |FDPE        |    38|
+|17    |FDRE        |   441|
 |18    |FDSE        |     4|
 |19    |LD          |    14|
 |20    |LDC         |     2|
-|21    |IBUF        |     3|
+|21    |IBUF        |    19|
 |22    |OBUF        |    55|
 +------+------------+------+
 
 Report Instance Areas: 
-+------+-------------+-----------+------+
-|      |Instance     |Module     |Cells |
-+------+-------------+-----------+------+
-|1     |top          |           |   597|
-|2     |  dmem       |DMemory32  |    35|
-|3     |  inst_fetch |IF         |     3|
-|4     |    IF_pc    |PC         |     3|
-|5     |  rom_inst   |programROM |    98|
-|6     |  segs_inst  |segs       |    99|
-|7     |  vgas_inst  |vgas       |   247|
-|8     |    char_0   |vga_char   |    16|
-|9     |    char_2   |vga_char_0 |    24|
-+------+-------------+-----------+------+
++------+---------------+---------------------+------+
+|      |Instance       |Module               |Cells |
++------+---------------+---------------------+------+
+|1     |top            |                     |  2145|
+|2     |  dmem         |DMemory32            |    57|
+|3     |  executer     |EX                   |    20|
+|4     |    alu        |ALU                  |    20|
+|5     |  inst_fetch   |IF                   |     2|
+|6     |    IF_pc      |PC                   |     2|
+|7     |  leds_inst    |leds                 |    16|
+|8     |  rom_inst     |programROM           |   562|
+|9     |  segs_inst    |segs                 |   143|
+|10    |  switchs_inst |switchs              |    16|
+|11    |  vgas_inst    |vgas                 |  1150|
+|12    |    char_0     |vga_char             |    17|
+|13    |    char_2     |vga_char_0           |    23|
+|14    |    number_1   |vga_num_ram_module   |    62|
+|15    |    number_2   |vga_num_ram_module_1 |    62|
+|16    |    number_3   |vga_num_ram_module_2 |    62|
+|17    |    number_4   |vga_num_ram_module_3 |    62|
+|18    |    number_5   |vga_num_ram_module_4 |    62|
+|19    |    number_6   |vga_num_ram_module_5 |     1|
++------+---------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 31 critical warnings and 5090 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:02:50 . Memory (MB): peak = 1032.258 ; gain = 790.707
-Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:03:05 . Memory (MB): peak = 1032.258 ; gain = 790.707
+Synthesis finished with 0 errors, 32 critical warnings and 4996 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:02:50 . Memory (MB): peak = 1033.285 ; gain = 791.406
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:02:57 . Memory (MB): peak = 1033.285 ; gain = 791.406
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 173 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
@@ -1500,10 +1512,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LDC => LDCE: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-469 Infos, 323 Warnings, 31 Critical Warnings and 0 Errors encountered.
+469 Infos, 317 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:03:11 . Memory (MB): peak = 1032.258 ; gain = 802.188
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:03:04 . Memory (MB): peak = 1033.285 ; gain = 802.902
 INFO: [Common 17-1381] The checkpoint 'D:/CPU/CPU.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1032.258 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue May 21 15:14:06 2024...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1033.285 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed May 22 10:22:55 2024...
