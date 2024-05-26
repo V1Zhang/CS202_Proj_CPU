@@ -70,27 +70,10 @@ output              vsync     // Field synchronization signal
     //  Clock
     cpuclk clk1(.clk_in1(clk), .cpu_clk(cpu_clk), .uart_clk(upg_clk));
     
-    
-   
-    //  Uart
-       uart_bmpg_0 uart_inst(
-       .upg_clk_i(upg_clk),
-       .upg_rst_i(upg_rst),
-       .upg_rx_i(rx),
-       .upg_clk_o(upg_clk_o),
-       .upg_wen_o(upg_wen_o),
-       .upg_adr_o(upg_adr_o),
-       .upg_dat_o(upg_dat_o),
-       .upg_done_o(upg_done_o),
-       .upg_tx_o(tx)
-       );
-       
-    
-    
     wire [`INST_LEN] inst;
     wire [`IMM_WIDTH] pc;
-    assign pc = 0;
     wire [`IMM_WIDTH] immOut;
+    wire PCSelect;
     wire PCSelect_back;
     
     wire upg_wen = upg_wen_o & (!upg_adr_o[14]);
@@ -99,17 +82,22 @@ output              vsync     // Field synchronization signal
     wire upg_done = upg_done_o;
 
     wire [13:0] fetch_addr;
-   //  Instruction Memory
-   programROM rom_inst(
-   .rom_clk_i(cpu_clk),
-   .rom_adr_i(fetch_addr),
-   .Instruction_o(inst),
-   .upg_rst_i(upg_rst),
-   .upg_clk_i(upg_clk_o),
-   .upg_wen_i(upg_wen),
-   .upg_adr_i(upg_addr),
-   .upg_dat_i(upg_dat_o),
-   .upg_done_i(upg_done_o)
+    
+    assign pc = 0;
+    
+    wire [`REG_WIDTH] ram_data_out;
+   
+    //  Uart
+    uart_bmpg_0 uart_inst(
+    .upg_clk_i(upg_clk),
+    .upg_rst_i(upg_rst),
+    .upg_rx_i(rx),
+    .upg_clk_o(upg_clk_o),
+    .upg_wen_o(upg_wen_o),
+    .upg_adr_o(upg_adr_o),
+    .upg_dat_o(upg_dat_o),
+    .upg_done_o(upg_done_o),
+    .upg_tx_o(tx)
     );
     
     // IF
@@ -118,34 +106,33 @@ output              vsync     // Field synchronization signal
     .rst(rst),
     .pcSrc(PCSelect_back),
     .imm(immOut),
-    .pc(pc),
+//    .pc(pc),
     .fetch_addr(fetch_addr)
     );
+    
+    //  Instruction Memory
+    programROM rom_inst(
+    .rom_clk_i(cpu_clk),
+    .rom_adr_i(fetch_addr),
+    .Instruction_o(inst),
+    .upg_rst_i(upg_rst),
+    .upg_clk_i(upg_clk_o),
+    .upg_wen_i(upg_wen),
+    .upg_adr_i(upg_addr),
+    .upg_dat_i(upg_dat_o),
+    .upg_done_i(upg_done_o)
+    );
    
-   wire [`REG_IDX_LEN] rs1 = inst[19:15];
-   wire [`REG_IDX_LEN] rs2 = inst[24:20];
+//   wire [`REG_IDX_LEN] rs1 = inst[19:15];
+//   wire [`REG_IDX_LEN] rs2 = inst[24:20];
    wire [`REG_IDX_LEN] wirte_r = inst[11:7];
    wire [`IMM_WIDTH] rd1;
    wire [`IMM_WIDTH] rd2;
-   wire PCSelect;
 
    
    wire RegWrite;
    wire [`REG_WIDTH] write_back_data;
    
-    // ID
-    ID inst_decoder(.clk(cpu_clk), 
-    .rst(rst), 
-    .inst(inst),
-    .write_en(RegWrite),
-    .write_r(wirte_r),
-    .write_data(write_back_data),
-    .rd1(rd1),
-    .rd2(rd2),
-    .immOut(immOut),
-    .PCSelect(PCSelect));
-   
-   assign PCSelect_back = PCSelect;
    wire Branch;
    wire [`ALU_OP_LEN] ALUOp;
    wire ALUsrc;
@@ -159,36 +146,50 @@ output              vsync     // Field synchronization signal
    wire IORead;
    wire IOWrite;
    
-   // Controller
-  Controller controller(.inst(inst),
-  .ALU_result_high(ALUResult[31:10]),
-  .rs1(rs1),
-  .rs2(rs2),
-  .imm(immOut),
-  .Branch(Branch),
-  .ALUOp(ALUOp),
-  .ALUsrc(ALUsrc),
-  .MemorIOtoReg(MemorIOtoReg),
-  .MemRead(MemRead),
-  .MemWrite(MemWrite),
-  .IORead(IORead),
-  .IOWrite(IOWrite),
-  .funct3(funct3),
-  .funct7(funct7));
-         
+    // Controller
+    Controller controller(.inst(inst),
+    .ALU_result_high(ALUResult[31:10]),
+    //  .rs1(rs1),
+    //  .rs2(rs2),
+    //  .imm(immOut),
+    .Branch(Branch),
+    .ALUOp(ALUOp),
+    .ALUsrc(ALUsrc),
+    .MemorIOtoReg(MemorIOtoReg),
+    .RegWrite(RegWrite),
+    .MemRead(MemRead),
+    .MemWrite(MemWrite),
+    .IORead(IORead),
+    .IOWrite(IOWrite),
+    .funct3(funct3),
+    .funct7(funct7));
+  
+  
+    // ID
+    ID inst_decoder(.clk(cpu_clk), 
+    .rst(rst), 
+    .inst(inst),
+    .write_en(RegWrite),
+    .write_r(wirte_r),
+    .write_data(write_back_data),
+    .rd1(rd1),
+    .rd2(rd2),
+    .immOut(immOut),
+    .PCSelect(PCSelect));
+    
+    assign PCSelect_back = PCSelect;
    
    // EX    
    EX executer(.rd1(rd1),
    .rd2(rd2),
    .imm(immOut),
-   .pc(pc),
+//   .pc(pc),
    .ALUsrc(ALUsrc),
    .funct3(funct3),
    .funct7(funct7),
    .ALUOp(ALUOp),
    .ALUResult(ALUResult));
     
-    wire [`REG_WIDTH] ram_data_out;
     DMemory32 dmem(
        .cpu_clk(cpu_clk),
        .mem_write_enable(MemWrite),
@@ -203,35 +204,26 @@ output              vsync     // Field synchronization signal
        .mem_register_output_data(ram_data_out)
        );
        
-       
-   // WB
-   WB write_back(.clk(cpu_clk),
-//       .address(ALUResult),
-       .write_data(rd2),
-       .read_en(MemRead),
-       .write_en(MemWrite),
-       .MemtoReg(MemorIOtoReg),
-       .ram_data_out(ram_data_out));
-       
-       
+   
+          
    wire [31:0] addr_out;    
    wire SwitchCtrl, LEDCtrl, SEGCtrl, VGACtrl;
    wire [31:0] write_data;
    wire [31:0] write_data_seg;
    wire [31:0] write_data_vga;
-   
+   wire [31:0] memData;
    
    wire [`SWITCH_WIDTH] switchrdata;
    // IO
    MemOrIO io(.addr_in(ALUResult),
    .mRead(MemRead),
-   .mWrite(MemRead),
+   .mWrite(MemWrite),
    .IORead(IORead),
    .IOWrite(IOWrite),
    .m_rdata(ram_data_out),
    .io_rdata(switchrdata),
    .r_rdata(rd2),
-   .r_wdata(write_back_data),
+   .r_wdata(memData),
    .write_data(write_data),
    .write_data_seg(write_data_seg),
    .write_data_vga(write_data_vga),
@@ -241,42 +233,51 @@ output              vsync     // Field synchronization signal
    .VGACtrl(VGACtrl),
    .SwitchCtrl(SwitchCtrl)); 
     
-    
-   //  Switch
-       switchs switchs_inst(
-       .clk(cpu_clk),
-       .rst(rst),
-       .IORead(IORead),
-       .SwitchCtrl(SwitchCtrl),
-       .switchaddr(addr_out[1:0]),
-       .switchrdata(switchrdata),
-       .switch(switch)
+        
+   // WB
+   WB write_back(
+       .memData(memData),
+       .MemtoReg(MemorIOtoReg),
+       .ALUResult(ALUResult),
+       .write_back(write_back_data)
        );
        
-       //  LED
-       leds leds_inst(
-       .clk(clk),
-       .rst(rst),
-       .IOWrite(IOWrite),
-       .LEDCtrl(LEDCtrl),
-       .ledaddr(addr_out[1:0]),
-       .ledwdata(switchrdata),
-       .led(led)
-       );
+
+    //  Switch
+    switchs switchs_inst(
+    .clk(cpu_clk),
+    .rst(rst),
+    .IORead(IORead),
+    .SwitchCtrl(SwitchCtrl),
+    .switchaddr(addr_out[1:0]),
+    .switchrdata(switchrdata),
+    .switch(switch)
+    );
        
-       //  SEG
-       segs segs_inst(
-       .clk(cpu_clk),
-       .rst(rst),
-       .kickOff(kickOff),
-       .IOWrite(IOWrite),
-       .SEGCtrl(SEGCtrl),
-       .segaddr(addr_out[1:0]),
-       .segwdata(write_data_seg),
-       .seg_en(seg_en),
-       .seg_out1(seg_out1),
-       .seg_out2(seg_out2)
-       );
+    //  LED
+    leds leds_inst(
+    .clk(cpu_clk),
+    .rst(rst),
+    .IOWrite(IOWrite),
+    .LEDCtrl(LEDCtrl),
+    .ledaddr(addr_out[1:0]),
+    .ledwdata(switchrdata),
+    .led(led)
+    );
+       
+    //  SEG
+    segs segs_inst(
+    .clk(cpu_clk),
+    .rst(rst),
+    .kickOff(kickOff),
+    .IOWrite(IOWrite),
+    .SEGCtrl(SEGCtrl),
+    .segaddr(addr_out[1:0]),
+    .segwdata(write_data_seg),
+    .seg_en(seg_en),
+    .seg_out1(seg_out1),
+    .seg_out2(seg_out2)
+    );
        
    //  VGA
     vgas vgas_inst(

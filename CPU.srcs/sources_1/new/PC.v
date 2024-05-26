@@ -23,24 +23,20 @@ module PC(
 
 
 reg [`REG_WIDTH] tmpPC;
-wire [31:0] BranchOut;  //ALU      ,  ??  
+//wire [31:0] BranchOut;  //ALU  
 
-//        PC  imm ? 
 // assign BranchOut = curPC + imm;
 
-
-//   ?       ?     ?   ? 
-always@(posedge clk)
-    begin
-	tmpPC <= curPC + (pcSrc)? imm : 4;
+    always@(posedge clk) begin
+        if(~rst) nextPC <= 0;
+	    else nextPC <= (pcSrc)? (curPC + imm) :(curPC + 4);
     end
-    //   ?   ?  ?   PC  ¦Ë ? 
-    always@(negedge clk or posedge rst)
-    begin
-        if(rst)
-            nextPC <= 0;
-        else
-            nextPC <= tmpPC;
-    end
+//    always@(negedge clk or posedge rst)
+//    begin
+//        if(rst)
+//            nextPC <= 0;
+//        else
+//            nextPC <= tmpPC;
+//    end
 
 endmodule

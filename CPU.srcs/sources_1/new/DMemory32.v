@@ -1,24 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/05/13 13:29:13
-// Design Name: 
-// Module Name: MEM
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+`include "ParamDef.vh"
 
 module DMemory32(
     input                       cpu_clk,
@@ -42,6 +23,7 @@ module DMemory32(
     /* CPU work on normal mode when kickOff is 1.
      CPU work on Uart communicate mode when kickOff is 0.*/
     wire kickOff = upg_rst | ( ~ upg_rst & upg_done);
+
      
     data_mem dm(
                  .clka (kickOff ?     counter_cpu_clk        : upg_clk),

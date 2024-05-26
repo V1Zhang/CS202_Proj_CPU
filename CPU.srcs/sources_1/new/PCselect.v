@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/05/14 17:57:35
-// Design Name: 
-// Module Name: PCselect
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 `include "ParamDef.vh"
 
@@ -28,8 +9,8 @@ module PCselect(
             output   reg                  PCSel
     );
     
-    wire funct3 = inst[14:12];
-    wire opcode = inst[6:0];
+    wire [`FUNCT3_WIDTH] funct3 = inst[14:12];
+    wire [`OP_WIDTH] opcode = inst[6:0];
     wire [1:0] compResult;
     
     compare comp(

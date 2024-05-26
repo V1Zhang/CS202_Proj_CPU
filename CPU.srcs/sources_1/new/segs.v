@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/05/18 12:49:21
-// Design Name: 
-// Module Name: segs
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module segs(input clk,                
             input rst,                
@@ -111,42 +91,42 @@ module segs(input clk,
                 3'b000 :
                 begin
                     disp_dat <= num0;
-                    seg_en <= 8'b00000001;//显示第一个数码管，低电平有效
+                    seg_en <= 8'b00000001;//  ?  ?      ?  ? ?  Ч
                 end
                 3'b001 :
                 begin
                     disp_dat <= num1;
-                    seg_en <= 8'b00000010;//显示第二个数码管，低电平有效
+                    seg_en <= 8'b00000010;//  ? ?       ?  ? ?  Ч
                 end
                 3'b010 :
                 begin
                     disp_dat <= num2;
-                    seg_en <= 8'b00000100;//显示第三个数码管，低电平有效
+                    seg_en <= 8'b00000100;//  ?          ?  ? ?  Ч
                 end
                 3'b011 :
                 begin
                     disp_dat <= num3;
-                    seg_en <= 8'b00001000;//显示第四个数码管，低电平有效
+                    seg_en <= 8'b00001000;//  ?   ?     ?  ? ?  Ч
                 end
                 3'b100 :
                 begin
                     disp_dat <= num4;
-                    seg_en <= 8'b00010000;//显示第五个数码管，低电平有效
+                    seg_en <= 8'b00010000;//  ?         ?  ? ?  Ч
                 end
                 3'b101 :
                 begin
                     disp_dat <= num5;
-                    seg_en <= 8'b00100000;//显示第六个数码管，低电平有效
+                    seg_en <= 8'b00100000;//  ?          ?  ? ?  Ч
                 end
                 3'b110 :
                 begin
                     disp_dat <= num6;
-                    seg_en <= 8'b01000000;//显示第七个数码管，低电平有效
+                    seg_en <= 8'b01000000;//  ?   ?     ?  ? ?  Ч
                 end
                 3'b111 :
                 begin
                     disp_dat <= num7;
-                    seg_en <= 8'b10000000;//显示第八个数码管，低电平有效
+                    seg_en <= 8'b10000000;//  ? ??     ?  ? ?  Ч
                 end
                 default:
                 begin
@@ -157,10 +137,10 @@ module segs(input clk,
         end
     end
     
-    always@(disp_dat) begin
-        if (seg_en > 8'b00001000) begin // 左4
+    always@(*) begin
+        if (seg_en > 8'b00001000) begin //   4
             case (disp_dat)
-                //显示0-F
+                //  ?0-F
                 4'h0 : seg_out1 = 8'hfc;
                 4'h1 : seg_out1 = 8'h60;
                 4'h2 : seg_out1 = 8'hda;
@@ -182,7 +162,7 @@ module segs(input clk,
         end
         else begin
             case (disp_dat)
-                //显示0-F
+                //  ?0-F
                 4'h0 : seg_out2 = 8'hfc;
                 4'h1 : seg_out2 = 8'h60;
                 4'h2 : seg_out2 = 8'hda;
@@ -197,9 +177,9 @@ module segs(input clk,
                 4'hb : seg_out2 = 8'h3e;
                 4'hc : seg_out2 = 8'h9c;
                 4'hd : seg_out2 = 8'h7a;
-                4'he : seg_out1 = 8'h9e;
-                4'hf : seg_out1 = 8'h8e;
-                default: seg_out1 = 8'h00;
+                4'he : seg_out2 = 8'h9e;
+                4'hf : seg_out2 = 8'h8e;
+                default: seg_out2 = 8'h00;
             endcase
         end
     end

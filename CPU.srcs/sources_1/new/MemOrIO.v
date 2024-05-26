@@ -1,24 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/05/14 18:29:19
-// Design Name: 
-// Module Name: IO
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+`include "ParamDef.vh"
 
 module MemOrIO(input mRead,                  // Read memory, from Controller
           input mWrite,                 // Write memory, from Controller
@@ -40,10 +21,10 @@ module MemOrIO(input mRead,                  // Read memory, from Controller
     
     assign addr_out   = addr_in;
     assign r_wdata    = (IORead == 1)?{16'h0000,io_rdata}:m_rdata; // may from memory or I/O, if from I/O, it is rdata's lower 16bit
-    assign SwitchCtrl = (IORead == 1'b1 && addr_in[7:4] == 4'b0111)?1'b1:1'b0; //switchCtrl, 1 is effective 地址 0xFFFF_FC70
-    assign LEDCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0110)?1'b1:1'b0; // ledCtrl, 1 is effective 地址 0xFFFF_FC60
-    assign SEGCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0101)?1'b1:1'b0; //segCtrl, 1 is effective 地址 0xFFFF_FC50
-    assign VGACtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b1001)?1'b1:1'b0; //vgaCtrl, 1 is effective 地址 0xFFFF_FC90
+    assign SwitchCtrl = (IORead == 1'b1 && addr_in[7:4] == 4'b0111)?1'b1:1'b0; //switchCtrl, 1 is effective   ? 0xFFFF_FC70
+    assign LEDCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0110)?1'b1:1'b0; // ledCtrl, 1 is effective   ? 0xFFFF_FC60
+    assign SEGCtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b0101)?1'b1:1'b0; //segCtrl, 1 is effective   ? 0xFFFF_FC50
+    assign VGACtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b1001)?1'b1:1'b0; //vgaCtrl, 1 is effective   ? 0xFFFF_FC90
     
     
     always @*begin

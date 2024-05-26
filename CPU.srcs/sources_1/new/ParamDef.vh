@@ -16,6 +16,7 @@
 `define INST_TYPES_WIDTH    2:0
 `define FUNCT3_WIDTH        2:0
 `define FUNCT7_WIDTH        6:0
+`define OP_WIDTH            6:0
 
 // OPCODE 不知道定义成什么，先放在这里
 `define typeR               3'h1
@@ -36,15 +37,6 @@
 `define opU                 7'b0110111
 `define opAU                7'b0010111
 
-// ALUOp
-`define AND                 3'h6
-`define OR                  3'h4
-`define XOR                 3'h5
-`define SLL                 3'h1
-`define SRL                 3'h3
-`define SRA                 3'h7
-`define ADD                 3'h0
-`define SUB                 3'h2
 
 `define UNSIGNED            1'b1
 `define SIGNED              1'b0

@@ -1,30 +1,11 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 2024/05/08 10:17:03
-// Design Name: 
-// Module Name: ALU
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 `include "ParamDef.vh"
 
 module ALU(
     input [`REG_WIDTH] operand1,
     input [`REG_WIDTH] operand2,
-    input [`ALU_OP_LEN] ALUOp, // load/store 00; Branch 01; 算数 10
+    input [`ALU_OP_LEN] ALUOp, // load/store 00; Branch 01;      10
     input [2:0] funct3, 
     input [6:0] funct7,  
     output reg [31:0] ALUResult
@@ -80,7 +61,7 @@ endmodule
 //input [`IMM_WIDTH ] data1,
 //input [`IMM_WIDTH ] data2,
 //input ALUOp,
-//input Unsigned,// 特殊判断lui
+//input Unsigned,//      ж lui
 //output reg [`IMM_WIDTH ] out
 //    );
     
@@ -91,7 +72,7 @@ endmodule
 //            `AND: out = data1 & data2;
 //            `OR: out = data1 | data2;
 //            `XOR: out = data1 ^ data2;
-//            // 为了特殊处理lui
+//            // ?     ?  lui
 //            `SLL: out = (Unsigned == 1'b0) ? data2 : data1 << $unsigned(data2[4: 0]);
 //            `SRL: out = data1 >> $unsigned(data2[4: 0]);
 //            `SRA: out = $signed(data1) >> $unsigned(data2[4: 0]);
@@ -99,4 +80,5 @@ endmodule
 //        endcase
 //    end
 //endmodule
+
 
