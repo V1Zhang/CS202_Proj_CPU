@@ -1,10 +1,17 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+<<<<<<< HEAD:CS202_CPU_2024Spring.ip_user_files/ip/data_mem/data_mem_stub.vhdl
 -- Date        : Tue Jun  4 17:07:52 2024
 -- Host        : LAPTOP-K1RM7BEP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/Vivado/test/CS202_CPU_2024Spring/CS202_CPU_2024Spring.srcs/sources_1/ip/data_mem/data_mem_stub.vhdl
+=======
+-- Date        : Tue Jun  4 17:22:54 2024
+-- Host        : Aurora running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ data_mem_stub.vhdl
+>>>>>>> 8a83d4cda0d4cbb3e07d9273b37b330fa58d718b:CPU.runs/data_mem_synth_1/data_mem_stub.vhdl
 -- Design      : data_mem
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcsg324-1
@@ -12,7 +19,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity data_mem is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     clka : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -21,9 +28,9 @@ entity data_mem is
     douta : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
-end data_mem;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture stub of data_mem is
+architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
