@@ -1,8 +1,7 @@
-`timescale 1ns / 1ps
-
 module WB(
+    input                        clk,
     input       [`IMM_WIDTH]     memData,
-    input                        MemtoReg,
+    input                        MemorIOtoReg,
     input       [`IMM_WIDTH]     ALUResult,
     output reg  [`IMM_WIDTH]     write_back
 );
@@ -15,8 +14,13 @@ ALUResult       I      EX/ALU       calculating result
 write_back      O     register      the data for reg
 ****************************************************************/
 
+//reg [`IMM_WIDTH] ALUTmp;
+//    always@(posedge clk)begin
+//        ALUTmp <= ALUResult;
+//    end
+    
     always@* begin
-        case(MemtoReg)
+        case(MemorIOtoReg)
             1'b1: write_back = memData;
             default: write_back = ALUResult;
         endcase

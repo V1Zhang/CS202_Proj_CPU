@@ -25,6 +25,7 @@
 `define typeB               3'h4
 `define typeJ               3'h5
 `define typeU               3'h6
+`define typeIL              3'h7
 
 `define opR                 7'b0110011
 `define opI                 7'b0010011
@@ -50,14 +51,11 @@
 `define PCSEL_JUMP           1'b1
 `define PCSEL_PC             1'b0
 
-
-// VGA
-// 时间参数
-// 水平数据以 VGA 时钟周期计算；垂直数据以 VGA 行数计算
+//VGA
 // 水平/垂直数据
-`define HDAT_BEGIN          10'd144 
+`define HDAT_BEGIN          10'd143 
 `define HDAT_END            10'd783
-`define VDAT_BEGIN          10'd35
+`define VDAT_BEGIN          10'd34
 `define VDAT_END            10'd514
  // 水平/垂直同步信号
 `define HSYNC_END           10'd95

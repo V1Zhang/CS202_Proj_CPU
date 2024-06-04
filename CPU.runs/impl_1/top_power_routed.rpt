@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sun May 26 21:09:24 2024
-| Host             : LAPTOP-14CM3F3C running 64-bit major release  (build 9200)
+| Date             : Tue Jun  4 17:31:35 2024
+| Host             : Aurora running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a35tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.195        |
+| Total On-Chip Power (W)  | 0.181        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.121        |
+| Dynamic (W)              | 0.108        |
 | Device Static (W)        | 0.073        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 84.1         |
@@ -52,21 +52,21 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.002 |        6 |       --- |             --- |
-| Slice Logic             |     0.004 |     5058 |       --- |             --- |
-|   LUT as Logic          |     0.004 |     2156 |     20800 |           10.37 |
-|   CARRY4                |    <0.001 |      115 |      8150 |            1.41 |
-|   F7/F8 Muxes           |    <0.001 |      295 |     32600 |            0.90 |
-|   Register              |    <0.001 |     1891 |     41600 |            4.55 |
-|   BUFG                  |    <0.001 |        2 |        32 |            6.25 |
+| Clocks                  |    <0.001 |        6 |       --- |             --- |
+| Slice Logic             |     0.003 |     5868 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     2677 |     20800 |           12.87 |
+|   CARRY4                |    <0.001 |      152 |      8150 |            1.87 |
+|   Register              |    <0.001 |     2056 |     41600 |            4.94 |
+|   F7/F8 Muxes           |    <0.001 |      333 |     32600 |            1.02 |
+|   BUFG                  |    <0.001 |        3 |        32 |            9.38 |
 |   LUT as Shift Register |    <0.001 |       10 |      9600 |            0.10 |
-|   Others                |     0.000 |      150 |       --- |             --- |
-| Signals                 |     0.009 |     3963 |       --- |             --- |
-| Block RAM               |     0.005 |       29 |        50 |           58.00 |
-| PLL                     |     0.100 |        1 |         5 |           20.00 |
-| I/O                     |     0.001 |       59 |       210 |           28.10 |
+|   Others                |     0.000 |      163 |       --- |             --- |
+| Signals                 |     0.003 |     4757 |       --- |             --- |
+| Block RAM               |     0.002 |       29 |        50 |           58.00 |
+| PLL                     |     0.095 |        1 |         5 |           20.00 |
+| I/O                     |     0.005 |       78 |       210 |           37.14 |
 | Static Power            |     0.073 |          |           |                 |
-| Total                   |     0.195 |          |           |                 |
+| Total                   |     0.181 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.038 |       0.027 |      0.010 |
-| Vccaux    |       1.800 |     0.064 |       0.051 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vccint    |       1.000 |     0.026 |       0.016 |      0.010 |
+| Vccaux    |       1.800 |     0.061 |       0.049 |      0.013 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -134,7 +134,7 @@ Table of Contents
 +-------------------+---------------------------+-----------------+
 | clk1/inst/clk_in1 | clk_IBUF                  |            10.0 |
 | clkfbout_cpuclk   | clk1/inst/clkfbout_cpuclk |            50.0 |
-| cpu_clk_cpuclk    | clk1/inst/cpu_clk_cpuclk  |            43.5 |
+| cpu_clk_cpuclk    | clk1/inst/cpu_clk_cpuclk  |           100.0 |
 | uart_clk_cpuclk   | clk1/inst/uart_clk_cpuclk |           100.0 |
 +-------------------+---------------------------+-----------------+
 
@@ -148,15 +148,16 @@ Table of Contents
 +---------------------------------------------------------------------------------+-----------+
 | Name                                                                            | Power (W) |
 +---------------------------------------------------------------------------------+-----------+
-| top                                                                             |     0.121 |
-|   clk1                                                                          |     0.100 |
-|     inst                                                                        |     0.100 |
-|   dmem                                                                          |     0.003 |
-|     dm                                                                          |     0.003 |
-|       U0                                                                        |     0.003 |
-|         inst_blk_mem_gen                                                        |     0.003 |
-|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.003 |
-|             valid.cstr                                                          |     0.003 |
+| top                                                                             |     0.108 |
+|   button_inst                                                                   |    <0.001 |
+|   clk1                                                                          |     0.095 |
+|     inst                                                                        |     0.095 |
+|   dmem                                                                          |     0.001 |
+|     dm                                                                          |     0.001 |
+|       U0                                                                        |     0.001 |
+|         inst_blk_mem_gen                                                        |     0.001 |
+|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.001 |
+|             valid.cstr                                                          |     0.001 |
 |               bindec_a.bindec_inst_a                                            |    <0.001 |
 |               has_mux_a.A                                                       |    <0.001 |
 |               ramloop[0].ram.r                                                  |    <0.001 |
@@ -191,20 +192,22 @@ Table of Contents
 |                 prim_noinit.ram                                                 |    <0.001 |
 |   executer                                                                      |    <0.001 |
 |     alu                                                                         |    <0.001 |
-|   inst_decoder                                                                  |     0.005 |
-|     regFile                                                                     |     0.005 |
+|   inst_decoder                                                                  |     0.001 |
+|     regFile                                                                     |     0.001 |
 |     u1                                                                          |    <0.001 |
 |       comp                                                                      |    <0.001 |
 |   inst_fetch                                                                    |    <0.001 |
 |     IF_pc                                                                       |    <0.001 |
-|   rom_inst                                                                      |     0.008 |
-|     rom_inst                                                                    |     0.004 |
-|       U0                                                                        |     0.004 |
-|         inst_blk_mem_gen                                                        |     0.004 |
-|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.004 |
-|             valid.cstr                                                          |     0.004 |
+|   io                                                                            |    <0.001 |
+|   leds_inst                                                                     |    <0.001 |
+|   rom_inst                                                                      |     0.003 |
+|     rom_inst                                                                    |     0.002 |
+|       U0                                                                        |     0.002 |
+|         inst_blk_mem_gen                                                        |     0.002 |
+|           gnbram.gnativebmg.native_blk_mem_gen                                  |     0.002 |
+|             valid.cstr                                                          |     0.002 |
 |               bindec_a.bindec_inst_a                                            |    <0.001 |
-|               has_mux_a.A                                                       |     0.001 |
+|               has_mux_a.A                                                       |    <0.001 |
 |               ramloop[0].ram.r                                                  |    <0.001 |
 |                 prim_noinit.ram                                                 |    <0.001 |
 |               ramloop[10].ram.r                                                 |    <0.001 |
@@ -236,6 +239,8 @@ Table of Contents
 |               ramloop[9].ram.r                                                  |    <0.001 |
 |                 prim_noinit.ram                                                 |    <0.001 |
 |   segs_inst                                                                     |    <0.001 |
+|     num7_reg[0]                                                                 |    <0.001 |
+|   switchs_inst                                                                  |    <0.001 |
 |   uart_inst                                                                     |    <0.001 |
 |     inst                                                                        |    <0.001 |
 |       upg_inst                                                                  |    <0.001 |
@@ -270,6 +275,7 @@ Table of Contents
 |     number_4                                                                    |     0.000 |
 |     number_5                                                                    |    <0.001 |
 |     number_6                                                                    |     0.000 |
+|   write_back                                                                    |    <0.001 |
 +---------------------------------------------------------------------------------+-----------+
 
 

@@ -8,15 +8,14 @@ vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 vmap xpm modelsim_lib/msim/xpm
 
 vlog -work xil_defaultlib -64 -incr -sv "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
-"D:/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-"D:/Vivado/2017.4/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+"E:/vivado/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -64 -93 \
-"D:/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
+"E:/vivado/Vivado/2017.4/data/ip/xpm/xpm_VCOMP.vhd" \
 
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic" "+incdir+../../../ipstatic" \
-"../../../ip/cpuclk/cpuclk_clk_wiz.v" \
-"../../../ip/cpuclk/cpuclk.v" \
+"../../../../CPU.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
+"../../../../CPU.srcs/sources_1/ip/cpuclk/cpuclk.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

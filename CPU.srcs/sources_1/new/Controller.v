@@ -5,9 +5,6 @@
 module Controller( // Combination Logic 
 input[`INST_LEN] inst,
 input[21:0] ALU_result_high, // From executer, Alu_Result[31:10]
-//output[`REG_IDX_LEN] rs1,
-//output[`REG_IDX_LEN] rs2,
-//output[`REG_WIDTH] imm,
 output Branch, //beq
 output reg [1:0] ALUOp,
 output ALUsrc, //
@@ -69,18 +66,15 @@ output [`FUNCT7_WIDTH] funct7
         endcase
     end
     
-    wire lw;
-    wire sw;
-    assign lw       = (opcode == 6'b100011)? 1'b1:1'b0;
-    assign sw       = (opcode == 6'b101011)? 1'b1:1'b0;
+    wire src = (ALU_result_high[21:0] == 22'b1111111111111111111111)? 1'b1:1'b0;
     
     // ALUsrc
     assign ALUsrc       = (instType == `typeB || instType == `typeR)? 1'b0 : 1'b1;
     assign RegWrite     = (instType == `typeB || instType == `typeS)? 1'b0 : 1'b1;
-    assign MemWrite     = (sw == 1'b1 && (ALU_result_high[21:0] != 22'b1111111111111111111111))?1'b1:1'b0;
-    assign MemRead      = (lw == 1'b1 && (ALU_result_high[21:0] != 22'b1111111111111111111111))?1'b1:1'b0;
-    assign IORead       = (lw == 1'b1 && (ALU_result_high[21:0] == 22'b1111111111111111111111))?1'b1:1'b0;
-    assign IOWrite      = (sw == 1'b1 && (ALU_result_high[21:0] == 22'b1111111111111111111111))?1'b1:1'b0;
+    assign MemWrite     = (instType == `typeS && src == 1'b0       )? 1'b1 : 1'b0;
+    assign MemRead      = (opcode == `opIL    && src == 1'b0       )? 1'b1 : 1'b0;
+    assign IORead       = (opcode == `opIL    && src == 1'b1       )? 1'b1 : 1'b0;
+    assign IOWrite      = (instType == `typeS && src == 1'b1       )? 1'b1 : 1'b0;
     // Read operations require reading data from memory or I/O to write to the register
     assign MemorIOtoReg = IORead || MemRead;
 

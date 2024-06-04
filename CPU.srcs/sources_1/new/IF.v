@@ -8,14 +8,18 @@ module IF(
     input                   pcSrc,
     
     input   [`INST_LEN]     imm,
-//    input   [`INST_LEN]     pc,
+    output  [`INST_LEN]     curPC,
+    output  reg [`INST_LEN]     tempPC,
     output  [13:0]          fetch_addr
     );
     
+    
+    
     reg [`INST_LEN]  pc;
-    wire [`INST_LEN]  curPC;
+//    wire [`INST_LEN]  curPC;
     initial begin
         pc = 32'h0;
+     
     end
     PC IF_pc(
         .clk(cpu_clk),
@@ -25,9 +29,15 @@ module IF(
         .curPC(pc),
         .nextPC(curPC)
         );
-        
     always@(curPC) begin
         pc = curPC;
     end
+    
+    always@(posedge cpu_clk) begin
+                tempPC<=pc;
+    end
+    
     assign fetch_addr = curPC[15:2];
+//    assign pc_o = curPC; // for auipc
 endmodule
+

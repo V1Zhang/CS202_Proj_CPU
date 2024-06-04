@@ -21,25 +21,24 @@
 
 
 module divclk_20ms(
-input clk,rst_n,
+input clk,
 output reg clk_20ms
     );
-    parameter period=2000;
-    reg [31:0] cnt;
-    always @(posedge clk,negedge rst_n )
+//    parameter period=2000;
+    reg [15:0] cnt;
+    always @(posedge clk)
     begin
-        if (~rst_n) begin
-            cnt<=0;
-            clk_20ms<=0;
-        end
-        else
-            if (cnt==((period>>1)-1))
+//        if (~rst_n) begin
+//            cnt<=0;
+//            clk_20ms<=0;
+//        end
+//        else
+            if (cnt==0)
             begin
-                clk_20ms<=~clk_20ms;
-                cnt<=0;
+                clk_20ms <= ~clk_20ms;
             end
             else begin
-                cnt<=cnt+1;
+                cnt <= cnt+1;
             end 
     end
 endmodule

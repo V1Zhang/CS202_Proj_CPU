@@ -1,4 +1,24 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2024/05/18 12:49:21
+// Design Name: 
+// Module Name: segs
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 
 module segs(input clk,                
             input rst,                
@@ -31,53 +51,51 @@ module segs(input clk,
         end
     end
 
-    always@(posedge clk or posedge rst) begin
+//    always@(posedge clk or posedge rst) begin
+always@(*) begin
         if (rst) begin
-            if (kickOff == 1'b0) begin
-                num7 <= 4'h1;
+                if (kickOff == 1'b0) begin
+                    num7 = 4'h1;
+                    num6 = 4'h0;
+                    num5 = 4'h0;
+                    num4 = 4'h0;
+                    num3 = 4'h0;
+                    num2 = 4'h0;
+                    num1 = 4'h0;
+                    num0 = 4'h0;                    
+                end
+                else begin
+                    num7 = 4'h0;
+                    num6 = 4'h0;
+                    num5 = 4'h0;
+                    num4 = 4'h0;
+                    num3 = 4'h0;
+                    num2 = 4'h0;
+                    num1 = 4'h0;
+                    num0 = 4'h0; 
+                end
             end
-            else begin
-                num7 <= 4'h2;
-            end
-            num6 <= 4'he;
-            num5 <= 4'he;
-            num4 <= 4'he;
-            num3 <= 4'he;
-            num2 <= 4'he;
-            num1 <= 4'he;
-            num0 <= 4'he;
-        end
         else if (SEGCtrl == 1'b1 && IOWrite == 1'b1) begin
             if (segaddr == 2'b00 || segaddr == 2'b10) begin
-                num7 <= segwdata[31:28];
-                num6 <= segwdata[27:24];
-                num5 <= segwdata[23:20];
-                num4 <= segwdata[19:16];
-                num3 <= segwdata[15:12];
-                num2 <= segwdata[11:8];
-                num1 <= segwdata[7:4];
-                num0 <= segwdata[3:0];
-            end
-            else begin
-                num7 <= num7;
-                num6 <= num6;
-                num5 <= num5;
-                num4 <= num4;
-                num3 <= num3;
-                num2 <= num2;
-                num1 <= num1;
-                num0 <= num0;
+                num7 = segwdata[31:28];
+                num6 = segwdata[27:24];
+                num5 = segwdata[23:20];
+                num4 = segwdata[19:16];
+                num3 = segwdata[15:12];
+                num2 = segwdata[11:8];
+                num1 = segwdata[7:4];
+                num0 = segwdata[3:0];
             end
         end
         else begin
-            num7 <= num7;
-            num6 <= num6;
-            num5 <= num5;
-            num4 <= num4;
-            num3 <= num3;
-            num2 <= num2;
-            num1 <= num1;
-            num0 <= num0;
+            num7 = num7;
+            num6 = num6;
+            num5 = num5;
+            num4 = num4;
+            num3 = num3;
+            num2 = num2;
+            num1 = num1;
+            num0 = num0;
         end
     end
 
@@ -91,42 +109,42 @@ module segs(input clk,
                 3'b000 :
                 begin
                     disp_dat <= num0;
-                    seg_en <= 8'b00000001;//  ?  ?      ?  ? ?  完
+                    seg_en <= 8'b00000001;
                 end
                 3'b001 :
                 begin
                     disp_dat <= num1;
-                    seg_en <= 8'b00000010;//  ? ?       ?  ? ?  完
+                    seg_en <= 8'b00000010;
                 end
                 3'b010 :
                 begin
                     disp_dat <= num2;
-                    seg_en <= 8'b00000100;//  ?          ?  ? ?  完
+                    seg_en <= 8'b00000100;
                 end
                 3'b011 :
                 begin
                     disp_dat <= num3;
-                    seg_en <= 8'b00001000;//  ?   ?     ?  ? ?  完
+                    seg_en <= 8'b00001000;
                 end
                 3'b100 :
                 begin
                     disp_dat <= num4;
-                    seg_en <= 8'b00010000;//  ?         ?  ? ?  完
+                    seg_en <= 8'b00010000;
                 end
                 3'b101 :
                 begin
                     disp_dat <= num5;
-                    seg_en <= 8'b00100000;//  ?          ?  ? ?  完
+                    seg_en <= 8'b00100000;
                 end
                 3'b110 :
                 begin
                     disp_dat <= num6;
-                    seg_en <= 8'b01000000;//  ?   ?     ?  ? ?  完
+                    seg_en <= 8'b01000000;
                 end
                 3'b111 :
                 begin
                     disp_dat <= num7;
-                    seg_en <= 8'b10000000;//  ? ??     ?  ? ?  完
+                    seg_en <= 8'b10000000;
                 end
                 default:
                 begin
@@ -140,7 +158,7 @@ module segs(input clk,
     always@(*) begin
         if (seg_en > 8'b00001000) begin //   4
             case (disp_dat)
-                //  ?0-F
+                //  尨0-F
                 4'h0 : seg_out1 = 8'hfc;
                 4'h1 : seg_out1 = 8'h60;
                 4'h2 : seg_out1 = 8'hda;
@@ -162,7 +180,7 @@ module segs(input clk,
         end
         else begin
             case (disp_dat)
-                //  ?0-F
+                //  尨0-F
                 4'h0 : seg_out2 = 8'hfc;
                 4'h1 : seg_out2 = 8'h60;
                 4'h2 : seg_out2 = 8'hda;
