@@ -10,13 +10,13 @@
 | 12210723 | 王禀钦 | 33.3%  |
 | 12210360 | 黄奕凡 | 33.3%  |
 
+## 分工
 
-
-|        | top  | uart | asm1 | asm2 | 模块实现 | 模块测试 | MMIO |
-| :----: | :--: | :--: | :--: | ---- | :------: | :------: | ---- |
-| 张伟祎 |  √   |  √   |  √   |      |    √     |    √     | √    |
-| 王禀钦 |      |      |  √   | √    |    √     |    √     | √    |
-| 黄奕凡 |      |  √   |  √   |      |    √     |    √     | √    |
+|     | top | uart | asm1 | asm2 | 模块实现 | 模块测试 | MMIO |
+| :-: | :-: | :--: | :--: | :--: | :--: | :--: | :--: |
+| 张伟祎 |  √  |  √   |  √   |      |  √   |  √   |  √   |
+| 王禀钦 |     |      |  √   |  √   |  √   |  √   |  √   |
+| 黄奕凡 |     |  √   |  √   |      |  √   |  √   |  √   |
 
 ## 开发计划日程安排
 
@@ -30,6 +30,8 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 
 * 一些输出和显示模块：`vga, led`
 
+* 用Java实现txt转coe小工具
+
 ### 5.15-5.21
 
 * 连接uart
@@ -40,25 +42,26 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 
 ### 5.22-5.26
 
-* 单元测试
+* 每个模块单元测试
+
+* 顶层测试
+### 5.27-6.3
+
+* 修改并测试test1，test2的asm
 
 # CPU架构设计说明
 
 ## CPU 特性
 
-> * ISA（含所有指令（指令名、对应编码、使用方式），参考的ISA，基于参考ISA本次作业所做的更新或优化；寄存器（位宽和数目）等信息）； 对于异常处理的支持情况。
-> *  CPU 时钟、CPI ，属于单周期还是多周期CPU ，是否支持 pipeline （如支持，是几级流水，采用什么方式解决的流水线冲突问题）。
-> * 寻址空间设计：属于冯. 诺依曼结构还是哈佛结构；寻址单位，指令空间、数据空间的大小，栈空间的基地址。
-> * 对外设IO 的支持：采用单独的访问外设的指令（以及相应的指令）还是 MMIO （以及相关外设对应的地址），采用轮询还是中断的方式访问IO。
-
-
 ### ISA（指令集架构）
 
 - **参考的ISA**: RISC-V
-- **寄存器**: 32比特寄存器，包括通用寄存器、程序计数器（PC）、栈
-- **异常处理**: 
+- **寄存器**: 32bit寄存器，包括通用寄存器、程序计数器（PC）、栈
+- **异常处理**: 当RISC-V程序里给x0寄存器赋值时，无法写入
 
 ### 实现指令集
+（参考白老师bb站点上“RV32-reference_card”，除了`ecall, ebreak, sb, sh`其余指令均实现）
+
 * R: `add,sub,xor,or,and,sll,srl,sra,slt,sltu`
 * I: `addi,xori,ori,andi,slli,srli,srai,slti,sltiu`
 * Load: `lb,lbu,lw,lh,lhu`
@@ -70,17 +73,17 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 ### 时钟与性能
 
 - **CPU时钟**: 
-	- FPGA (clk): 25MHz
-	- Uart (uart_clk): 10Mhz
-	- CPU (cpu_clk): 10Mhz
+	- FPGA (clk): 100MHz
+	- Uart (uart_clk): 10MHz
+	- CPU (cpu_clk): 10MHz
 - **CPI**: 1
 - **CPU类型**: 单周期（Single-Cycle）
 
 ### 寻址空间设计
 
 - **结构类型**: 哈佛结构
-- **寻址单位**: 以一个word为单位
-- **指令空间与数据空间**: 提供指令空间和数据空间的大小，例如16MB指令空间、32MB数据空间等。
+- **寻址单位**: 以一个word，32bit为单位
+- **指令空间与数据空间**: 都为16384bit
 - **栈空间**: 
 	- 栈空间的基地址`0x7fff_effc`
 	- 大小：和内存等大 16384
@@ -108,6 +111,8 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 
 ## CPU 内部结构
 
+> 把每个模块输入输出截图放入
+
 *  CPU 内部各子模块的接口连接关系图
 
 <center>
@@ -121,17 +126,100 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 * 用一个信号控制是否使用uart。如果不用uart，直接根据读入的内存地址读取出需要的指令地址值；如果要使用uart，与要使用uart时钟，和一个 active high 的 reset 控制 uart 的开关，并且需要读取指令，就把指令放在对应的位置。
 
 ### IF
+input：
+* `cpu_clk`
+* `rst`
+* `pcSrc`: 选择信号，筛选pc是否跳转
+* `imm`: 从ID来若pc跳转，需要加上的立即数
 
-* 
+output:
+* `curPC` 
+* `tempPC`
+* `fetch_addr`
+
+### ID
+主要结构：
+* ID
+	* Register
+	* GenImm
+	* PCSelect
+		* compare
+
+将Branch相关指令的跳转判断放在ID模块执行，决定是否跳转所需时间更短，且不需要经过后面三个阶段，效率更高，因此增添`PCSelect`模块，输出`PCSrc`返回IF阶段，实现pc跳转的选择，模块结构如下：
+（图,最后再加）
+
+关键代码：
+```verilog
+    always@* begin
+        if (opcode == `opB) begin
+            case(funct3)
+                3'h0: PCSel = (compResult_s == `EQUAL)? `PCSEL_JUMP: `PCSEL_PC;
+                3'h1: PCSel = (compResult_s != `EQUAL)? `PCSEL_JUMP: `PCSEL_PC;
+                3'h4: PCSel = (compResult_s == `LESS)? `PCSEL_JUMP: `PCSEL_PC;
+                3'h6: PCSel = (compResult_u == `LESS)? `PCSEL_JUMP: `PCSEL_PC;
+                3'h5: PCSel = (compResult_s == `GREATER_EQ || compResult_s == `EQUAL)? `PCSEL_JUMP: `PCSEL_PC;
+                3'h7: PCSel = (compResult_u == `GREATER_EQ || compResult_u == `EQUAL)? `PCSEL_JUMP: `PCSEL_PC;
+                default PCSel = `PCSEL_PC;
+            endcase
+        end else if (opcode == `opJ || opcode == `opIJ) PCSel = `PCSEL_JUMP;
+        else PCSel = `PCSEL_PC;
+    end 
+```
+### EX
+
+### DMemory
+### WB
+多路选择器，用来筛选写回寄存器的数据是来自data memory还是ALU。
+
+（图）
+
+Input:
+* `clk`: cpu clock
+* `memData`: 内存中取出的数据
+* `MemorIOtoReg`: control bit
+* `ALUResult`: ALU计算结果
+
+Output：
+* `write_back`: 写回寄存器中的数据
+
+主要代码如下：
+```verilog
+always@* begin
+	case(MemorIOtoReg)
+		1'b1: write_back = memData;
+		default: write_back = ALUResult;
+	endcase
+end
+```
+### MemOrIO
+
+
 
 ## Bonus 部分
 
+Bonus 共包含以下三个部分
 * Uart
-
 * lui auipc
+* coe文件创作工具
 
-* CEO文件创作工具
+> bonus 对应功能点的设计说明
+> 	设计思路及与周边模块的关系
+> 	 核心代码及必要说明
+> 测试说明：测试场景说明，测试用例，测试结果及说明。
+> 问题及总结：在bonus功能点开发过程中遇到的问题、思考、总结。
 
+### Uart
+
+### `lui, auipc`
+
+#### 设计说明
+`lui`：
+
+> 	设计思路及与周边模块的关系
+> 	 核心代码及必要说明
+> 测试说明：测试场景说明，测试用例，测试结果及说明。
+> 问题及总结：在bonus功能点开发过程中遇到的问题、思考、总结。
+### coe文件创作工具
 # 系统上板使用说明
 
 * 点击按钮 left [V1] 开启通信模式，所有led灯全亮，传输结束后led灯回熄灭
@@ -142,7 +230,8 @@ project放出第一周，开始阅读项目要求，各自设计CPU部分
 * <img src="C:\Users\lenovo\Documents\WeChat Files\wxid_dvb4tq9ufmeh22\FileStorage\Temp\aace154a3fd9755b4ad7958cf8ac11b.png" alt="aace154a3fd9755b4ad7958cf8ac11b" style="zoom: 67%;" />
 
 # 自测说明
-* 以表格的方式罗列出测试方法（仿真、上板）、测试类型（单元、集成）、测试用例（除本文及OJ 以外的用例）描述、测试结果（通过、不通过），以及最终的测试结论。
+
+> 以表格的方式罗列出测试方法（仿真、上板）、测试类型（单元、集成）、测试用例（除本文及OJ 以外的用例）描述、测试结果（通过、不通过），以及最终的测试结论。
 ## 总体测试
 
 1. 出现timing的critical warning
@@ -179,10 +268,11 @@ wire spg_bufg;
 
 ### Uart
 
-| 测试方法 |                       问题描述                        | 解决方案                                                     | 测试结果 |
-| :------: | :---------------------------------------------------: | ------------------------------------------------------------ | -------- |
-|   仿真   | upg_rst和fpga_rst之间的逻辑错误，无法正确开启通信模式 | 项目所用按钮按下为高电平，upg_rst用于控制uart，使用按键V1；fpga_rst用于进入工作模式，使用按键R15 | 通过     |
-|   上板   |    使用串口传输助手发送，出现了先接收后发送的问题     | 原来换个板子就好了：)                                        | 通过     |
+| 测试方法 |                问题描述                | 解决方案                                                                         | 测试结果 |
+| :--: | :--------------------------------: | ---------------------------------------------------------------------------- | ---- |
+|  仿真  | upg_rst和fpga_rst之间的逻辑错误，无法正确开启通信模式 | 项目所用按钮按下为高电平，upg_rst用于控制uart，使用按键V1；fpga_rst用于进入工作模式，使用按键R15                 | 通过   |
+|  上板  |      使用串口传输助手发送，出现了先接收后发送的问题       | 原来换个板子就好了：)                                                                  | 通过   |
+|  上板  |       读内存时无法读出正确的内容，最后输出总是乱码       | 发现给inst内存和data memory的使能信号有问题，导致把inst写入data memory里，因此读出的“乱码”其实是machine code | 通过   |
 
 
 
@@ -192,15 +282,15 @@ wire spg_bufg;
 
 ### ID模块
 
-1. 计算pc和计算ALU_Result都通过alu模块，会产生冲突。基于**下降沿更新pc、上升沿取指、下降沿写入Mem**的设计，最初在时钟下降沿写回Register。如图所示为lw指令，会将Mem取回的值错误的存在下一条指令对应的寄存器。
+1. 计算`pc`和计算`ALUResult`都通过`ALU`模块，会产生冲突。基于**下降沿更新`pc`、上升沿取指、下降沿写入Mem**的设计，最初在时钟下降沿写回`Register`。如图所示为`lw`指令，会将Mem取回的值错误的存在下一条指令对应的寄存器。
 
    <img src="D:\CPU\pic\1.png" alt="1" style="zoom:50%;" />
 
-   ​	解决：在最初的解决方式中我们尝试了对ALUResult进行延迟处理，发现行不通后又继续往前对很多传递途径中涉及的信号进行了延迟，时钟没有解决问题。
+   ​	解决：在最初的解决方式中我们尝试了对`ALUResult`进行延迟处理，发现行不通后又继续往前对很多传递途径中涉及的信号进行了延迟，时钟没有解决问题。
 
-   ​	最终我们发现一条指令的处理周期不能超过两个时钟周期，因此我们改为在**时钟上升沿写回Register**，解决了lw指令的问题，并进一步对pc进行半个周期的latch，以服务于指令跳转
+   ​	最终我们发现一条指令的处理周期不能超过两个时钟周期，因此我们改为在**时钟上升沿写回`Register`**，解决了`lw`指令的问题，并进一步对`pc`进行半个周期的latch，以服务于指令跳转
 
-
+2. 
 
 
 
@@ -208,14 +298,13 @@ wire spg_bufg;
 
 ### EX模块
 `EX` 模块最为主要的是`ALU`部分
-实现了
 
 | 测试方法 |                  测试用例描述                  | 测试结果 |
 | :--: | :--------------------------------------: | ---- |
 |  仿真  | 测试`load`,`store`指令时`ALU`计算情况（`ALUOp=00`） | 通过   |
 |  仿真  |   测试`I,R`两种类型指令在不同funct3，funct7影响下计算结果   | 通过   |
 |  仿真  |                测试`auipc`                 | 通过   |
-|  仿真  |         测试`jal,jalr` 能否实现`pc+4`          | 通过   |
+|  仿真  |        测试`jal,jalr` 能否正确存储`pc+4`         | 通过   |
 
 
 
