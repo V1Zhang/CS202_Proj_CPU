@@ -1,17 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-<<<<<<<< HEAD:CS202_CPU_2024Spring.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
-// Date        : Tue Jun  4 17:22:38 2024
-// Host        : LAPTOP-K1RM7BEP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/test/CS202_CPU_2024Spring/CS202_CPU_2024Spring.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
-========
 // Date        : Tue Jun  4 17:16:52 2024
 // Host        : Aurora running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               e:/vivado/code/2024-Spring-CPU-CS202/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
->>>>>>>> 8a83d4cda0d4cbb3e07d9273b37b330fa58d718b:CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
 // Design      : cpuclk
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,7 +21,7 @@ module cpuclk
   output uart_clk;
   input clk_in1;
 
-  wire clk_in1;
+  (* IBUF_LOW_PWR *) wire clk_in1;
   wire cpu_clk;
   wire uart_clk;
 
@@ -68,7 +61,12 @@ module cpuclk_cpuclk_clk_wiz
        (.I(clkfbout_cpuclk),
         .O(clkfbout_buf_cpuclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkin1_bufg
+  (* CAPACITANCE = "DONT_CARE" *) 
+  (* IBUF_DELAY_VALUE = "0" *) 
+  (* IFD_DELAY_VALUE = "AUTO" *) 
+  IBUF #(
+    .IOSTANDARD("DEFAULT")) 
+    clkin1_ibufg
        (.I(clk_in1),
         .O(clk_in1_cpuclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
@@ -104,7 +102,7 @@ module cpuclk_cpuclk_clk_wiz
     .CLKOUT5_DIVIDE(1),
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
-    .COMPENSATION("BUF_IN"),
+    .COMPENSATION("ZHOLD"),
     .DIVCLK_DIVIDE(5),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),

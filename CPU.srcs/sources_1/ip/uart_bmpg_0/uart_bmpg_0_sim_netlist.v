@@ -1,17 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-<<<<<<<< HEAD:CS202_CPU_2024Spring.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0_sim_netlist.v
-// Date        : Tue Jun  4 17:13:38 2024
-// Host        : LAPTOP-K1RM7BEP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Vivado/test/CS202_CPU_2024Spring/CS202_CPU_2024Spring.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0_sim_netlist.v
-========
 // Date        : Tue Jun  4 17:14:58 2024
 // Host        : Aurora running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               e:/vivado/code/2024-Spring-CPU-CS202/CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0_sim_netlist.v
->>>>>>>> 8a83d4cda0d4cbb3e07d9273b37b330fa58d718b:CPU.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0_sim_netlist.v
 // Design      : uart_bmpg_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

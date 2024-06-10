@@ -78,7 +78,7 @@ module cpuclk_clk_wiz
   //------------------------------------
 wire clk_in1_cpuclk;
 wire clk_in2_cpuclk;
-  BUFG clkin1_bufg
+  IBUF clkin1_ibufg
    (.O (clk_in1_cpuclk),
     .I (clk_in1));
 

@@ -1,17 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-<<<<<<<< HEAD:CS202_CPU_2024Spring.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
--- Date        : Tue Jun  4 17:22:38 2024
--- Host        : LAPTOP-K1RM7BEP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Vivado/test/CS202_CPU_2024Spring/CS202_CPU_2024Spring.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
-========
 -- Date        : Tue Jun  4 17:16:52 2024
 -- Host        : Aurora running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               e:/vivado/code/2024-Spring-CPU-CS202/CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
->>>>>>>> 8a83d4cda0d4cbb3e07d9273b37b330fa58d718b:CPU.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
 -- Design      : cpuclk
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -46,7 +39,13 @@ architecture STRUCTURE of cpuclk_cpuclk_clk_wiz is
   signal NLW_plle2_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
-  attribute BOX_TYPE of clkin1_bufg : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkin1_ibufg : label is "PRIMITIVE";
+  attribute CAPACITANCE : string;
+  attribute CAPACITANCE of clkin1_ibufg : label is "DONT_CARE";
+  attribute IBUF_DELAY_VALUE : string;
+  attribute IBUF_DELAY_VALUE of clkin1_ibufg : label is "0";
+  attribute IFD_DELAY_VALUE : string;
+  attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of plle2_adv_inst : label is "PRIMITIVE";
@@ -56,8 +55,11 @@ clkf_buf: unisim.vcomponents.BUFG
       I => clkfbout_cpuclk,
       O => clkfbout_buf_cpuclk
     );
-clkin1_bufg: unisim.vcomponents.BUFG
-     port map (
+clkin1_ibufg: unisim.vcomponents.IBUF
+    generic map(
+      IOSTANDARD => "DEFAULT"
+    )
+        port map (
       I => clk_in1,
       O => clk_in1_cpuclk
     );
@@ -96,7 +98,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKOUT5_DIVIDE => 1,
       CLKOUT5_DUTY_CYCLE => 0.500000,
       CLKOUT5_PHASE => 0.000000,
-      COMPENSATION => "BUF_IN",
+      COMPENSATION => "ZHOLD",
       DIVCLK_DIVIDE => 5,
       IS_CLKINSEL_INVERTED => '0',
       IS_PWRDWN_INVERTED => '0',
