@@ -269,13 +269,13 @@ verilog segs segs_inst(
 
 ## CPU 内部结构
 
-<img src="Computer Organization report/image-20240609231230878.png" alt="image-20240609231230878" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609231230878.png" alt="image-20240609231230878" style="zoom:67%;" />
 
 ### IF
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609213859778.png" alt="image-20240609213859778" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609213859778.png" alt="image-20240609213859778" style="zoom:67%;" />
 
 * input：
 
@@ -313,7 +313,7 @@ verilog segs segs_inst(
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609213932193.png" alt="image-20240609213932193" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609213932193.png" alt="image-20240609213932193" style="zoom:67%;" />
 
 主要结构：
 * ID
@@ -367,7 +367,7 @@ end
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609213956848.png" alt="image-20240609213956848" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609213956848.png" alt="image-20240609213956848" style="zoom:67%;" />
 
 * Input:
 
@@ -390,7 +390,7 @@ end
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609214018329.png" alt="image-20240609214018329" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609214018329.png" alt="image-20240609214018329" style="zoom:67%;" />
 
 * Input: 
 
@@ -445,7 +445,7 @@ end
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609214030517.png" alt="image-20240609214030517" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609214030517.png" alt="image-20240609214030517" style="zoom:67%;" />
 
 * 多路选择器，用来筛选写回寄存器的数据是来自data memory还是ALU。
 
@@ -478,7 +478,7 @@ end
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609214137045.png" alt="image-20240609214137045" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609214137045.png" alt="image-20240609214137045" style="zoom:67%;" />
 
 * 在asm中`lw`有两个作用，一个是从内存中读取数据，另一个是从开发板中读取数据，`sw`同理。因此，这个模块主要用于区分数据读入的来源和输出的去向
 
@@ -503,7 +503,7 @@ assign VGACtrl    = (IOWrite == 1'b1 && addr_in[7:4] == 4'b1000)?1'b1:1'b0; //vg
 
 * 结构图
 
-<img src="Computer Organization report/image-20240609214309845.png" alt="image-20240609214309845" style="zoom:67%;" />
+<img src="report/Computer Organization report/image-20240609214309845.png" alt="image-20240609214309845" style="zoom:67%;" />
 
 * controller是CPU核心部分，主要用于输出各个模块的control bits，包含`Branch, LUOp, ALUsrc, MemorIOtoReg, RegWrite, MemRead, MemWrite, IORead, IOWrite,`
 
@@ -630,7 +630,7 @@ for (int i = 0; i < line.length(); i++) {
 * 点击 right [R11]确认case选择 
 * 在每个case交替点击 up[U4]， down [R17] 确定输入或结束显示（结束循环）
 
-<img src="C:/Users/HZSM/Downloads/3.png" alt="3" style="zoom:67%;" />
+<img src="report/Computer Organization report/3.png" alt="3" style="zoom:67%;" />
 
 # 自测说明
 
@@ -683,7 +683,7 @@ wire spg_bufg;
 
 1. 计算`pc`和计算`ALUResult`都通过`ALU`模块，会产生冲突。基于**下降沿更新`pc`、上升沿取指、下降沿写入Mem**的设计，最初在时钟下降沿写回`Register`。如图所示为`lw`指令，会将Mem取回的值错误的存在下一条指令对应的寄存器。
 
-   <img src="Computer Organization report/1.png" alt="1" style="zoom:30%;" />
+   <img src="report/Computer Organization report/1.png" alt="1" style="zoom:30%;" />
 
 * 解决：在最初的解决方式中我们尝试了对`ALUResult`进行延迟处理，发现行不通后又继续往前对很多传递途径中涉及的信号进行了延迟，时钟没有解决问题。
 * 最终我们发现一条指令的处理周期不能超过两个时钟周期，因此我们改为在**时钟上升沿写回`Register`**，解决了`lw`指令的问题，并进一步对`pc`进行半个周期的`latch`，以服务于指令跳转。
@@ -791,7 +791,7 @@ sw zero, 0x70(s11)
 
 	* 解决：以测试场景1为例，以a0专门存储输出结果，以a1专门存储按钮的结果。
 
-<img src="Computer Organization report/2.png" alt="2" style="zoom:50%;" />
+<img src="report/Computer Organization report/2.png" alt="2" style="zoom:50%;" />
 
  5.  输出结果与 RISC-V 结果与数码管显示的内容不同
 
